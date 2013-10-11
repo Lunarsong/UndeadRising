@@ -1,0 +1,734 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E60E51BB1804069C00181A26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E51BA1804069C00181A26 /* Foundation.framework */; };
+		E60E51BD1804069C00181A26 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E51BC1804069C00181A26 /* CoreGraphics.framework */; };
+		E60E51BF1804069C00181A26 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E51BE1804069C00181A26 /* UIKit.framework */; };
+		E60E51C51804069C00181A26 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E60E51C31804069C00181A26 /* InfoPlist.strings */; };
+		E60E51D41804069C00181A26 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E51D31804069C00181A26 /* XCTest.framework */; };
+		E60E51D51804069C00181A26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E51BA1804069C00181A26 /* Foundation.framework */; };
+		E60E51D61804069C00181A26 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E51BE1804069C00181A26 /* UIKit.framework */; };
+		E60E51DE1804069C00181A26 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E60E51DC1804069C00181A26 /* InfoPlist.strings */; };
+		E60E51E01804069C00181A26 /* UndeadRisingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E60E51DF1804069C00181A26 /* UndeadRisingTests.m */; };
+		E60E51F21804072400181A26 /* libEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E51EF180406F700181A26 /* libEngine.a */; };
+		E60E52491804098900181A26 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E60E52471804098900181A26 /* Main.cpp */; };
+		E60E524A1804098900181A26 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E60E52471804098900181A26 /* Main.cpp */; };
+		E60E525618040A0300181A26 /* libEngine Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E5253180409F500181A26 /* libEngine Mac.a */; };
+		E60E525A18040AE300181A26 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E525918040AE300181A26 /* OpenGL.framework */; };
+		E60E525C18040AE700181A26 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E525B18040AE700181A26 /* IOKit.framework */; };
+		E60E525E18040AF300181A26 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E525D18040AF300181A26 /* libz.dylib */; };
+		E60E526018040AFB00181A26 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E525F18040AFB00181A26 /* Cocoa.framework */; };
+		E60E526218040B0400181A26 /* libangelscript.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E526118040B0400181A26 /* libangelscript.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E60E51D71804069C00181A26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E60E51AF1804069C00181A26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E60E51B61804069C00181A26;
+			remoteInfo = UndeadRising;
+		};
+		E60E51EE180406F700181A26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E60E51E9180406F600181A26 /* Engine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E63EA91417C69948006F1456;
+			remoteInfo = Engine;
+		};
+		E60E51F0180406F700181A26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E60E51E9180406F600181A26 /* Engine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E6D0BDBA17CE1F6500CAC564;
+			remoteInfo = "Engine Mac";
+		};
+		E60E522F1804083500181A26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E60E51E9180406F600181A26 /* Engine.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E63EA91317C69948006F1456;
+			remoteInfo = Engine;
+		};
+		E60E5241180408F700181A26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E60E51E9180406F600181A26 /* Engine.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E6D0BDB917CE1F6400CAC564;
+			remoteInfo = "Engine Mac";
+		};
+		E60E5250180409F500181A26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E60E524B180409F500181A26 /* Engine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E63EA91417C69948006F1456;
+			remoteInfo = Engine;
+		};
+		E60E5252180409F500181A26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E60E524B180409F500181A26 /* Engine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E6D0BDBA17CE1F6500CAC564;
+			remoteInfo = "Engine Mac";
+		};
+		E60E5254180409FF00181A26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E60E524B180409F500181A26 /* Engine.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E6D0BDB917CE1F6400CAC564;
+			remoteInfo = "Engine Mac";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E60E5236180408EF00181A26 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E60E51B71804069C00181A26 /* UndeadRising.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UndeadRising.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E60E51BA1804069C00181A26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E60E51BC1804069C00181A26 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E60E51BE1804069C00181A26 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E60E51C21804069C00181A26 /* UndeadRising-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UndeadRising-Info.plist"; sourceTree = "<group>"; };
+		E60E51C41804069C00181A26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E60E51C81804069C00181A26 /* UndeadRising-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UndeadRising-Prefix.pch"; sourceTree = "<group>"; };
+		E60E51D21804069C00181A26 /* UndeadRisingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UndeadRisingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E60E51D31804069C00181A26 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
+		E60E51DB1804069C00181A26 /* UndeadRisingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UndeadRisingTests-Info.plist"; sourceTree = "<group>"; };
+		E60E51DD1804069C00181A26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E60E51DF1804069C00181A26 /* UndeadRisingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UndeadRisingTests.m; sourceTree = "<group>"; };
+		E60E51E9180406F600181A26 /* Engine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Engine.xcodeproj; path = ../../../../LunaEngine/Projects/iOS/Engine.xcodeproj; sourceTree = "<group>"; };
+		E60E51F91804078D00181A26 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		E60E51FC1804078D00181A26 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		E60E51FD1804078D00181A26 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E60E51FE1804078D00181A26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E60E5238180408EF00181A26 /* UndeadRising Mac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "UndeadRising Mac"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E60E52471804098900181A26 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
+		E60E52481804098900181A26 /* Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Main.h; sourceTree = "<group>"; };
+		E60E524B180409F500181A26 /* Engine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Engine.xcodeproj; path = ../../../LunaEngine/Projects/iOS/Engine.xcodeproj; sourceTree = "<group>"; };
+		E60E525918040AE300181A26 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
+		E60E525B18040AE700181A26 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
+		E60E525D18040AF300181A26 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
+		E60E525F18040AFB00181A26 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		E60E526118040B0400181A26 /* libangelscript.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libangelscript.a; path = ../../../LunaEngine/Engine/Externals/AngelScript/iOS/OSX/libangelscript.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E60E51B41804069C00181A26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E60E51F21804072400181A26 /* libEngine.a in Frameworks */,
+				E60E51BD1804069C00181A26 /* CoreGraphics.framework in Frameworks */,
+				E60E51BF1804069C00181A26 /* UIKit.framework in Frameworks */,
+				E60E51BB1804069C00181A26 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E60E51CF1804069C00181A26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E60E51D41804069C00181A26 /* XCTest.framework in Frameworks */,
+				E60E51D61804069C00181A26 /* UIKit.framework in Frameworks */,
+				E60E51D51804069C00181A26 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E60E5235180408EF00181A26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E60E526218040B0400181A26 /* libangelscript.a in Frameworks */,
+				E60E526018040AFB00181A26 /* Cocoa.framework in Frameworks */,
+				E60E525E18040AF300181A26 /* libz.dylib in Frameworks */,
+				E60E525C18040AE700181A26 /* IOKit.framework in Frameworks */,
+				E60E525A18040AE300181A26 /* OpenGL.framework in Frameworks */,
+				E60E525618040A0300181A26 /* libEngine Mac.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E60E51AE1804069C00181A26 = {
+			isa = PBXGroup;
+			children = (
+				E60E52461804098900181A26 /* Source */,
+				E60E51C01804069C00181A26 /* UndeadRising */,
+				E60E51D91804069C00181A26 /* UndeadRisingTests */,
+				E60E51B91804069C00181A26 /* Frameworks */,
+				E60E51B81804069C00181A26 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E60E51B81804069C00181A26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E60E51B71804069C00181A26 /* UndeadRising.app */,
+				E60E51D21804069C00181A26 /* UndeadRisingTests.xctest */,
+				E60E5238180408EF00181A26 /* UndeadRising Mac */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E60E51B91804069C00181A26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E60E526118040B0400181A26 /* libangelscript.a */,
+				E60E525F18040AFB00181A26 /* Cocoa.framework */,
+				E60E525D18040AF300181A26 /* libz.dylib */,
+				E60E525B18040AE700181A26 /* IOKit.framework */,
+				E60E525918040AE300181A26 /* OpenGL.framework */,
+				E60E524B180409F500181A26 /* Engine.xcodeproj */,
+				E60E51E9180406F600181A26 /* Engine.xcodeproj */,
+				E60E51BA1804069C00181A26 /* Foundation.framework */,
+				E60E51BC1804069C00181A26 /* CoreGraphics.framework */,
+				E60E51BE1804069C00181A26 /* UIKit.framework */,
+				E60E51D31804069C00181A26 /* XCTest.framework */,
+				E60E51F91804078D00181A26 /* Cocoa.framework */,
+				E60E51FB1804078D00181A26 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E60E51C01804069C00181A26 /* UndeadRising */ = {
+			isa = PBXGroup;
+			children = (
+				E60E51C11804069C00181A26 /* Supporting Files */,
+			);
+			path = UndeadRising;
+			sourceTree = "<group>";
+		};
+		E60E51C11804069C00181A26 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E60E51C21804069C00181A26 /* UndeadRising-Info.plist */,
+				E60E51C31804069C00181A26 /* InfoPlist.strings */,
+				E60E51C81804069C00181A26 /* UndeadRising-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E60E51D91804069C00181A26 /* UndeadRisingTests */ = {
+			isa = PBXGroup;
+			children = (
+				E60E51DF1804069C00181A26 /* UndeadRisingTests.m */,
+				E60E51DA1804069C00181A26 /* Supporting Files */,
+			);
+			path = UndeadRisingTests;
+			sourceTree = "<group>";
+		};
+		E60E51DA1804069C00181A26 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E60E51DB1804069C00181A26 /* UndeadRisingTests-Info.plist */,
+				E60E51DC1804069C00181A26 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E60E51EA180406F600181A26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E60E51EF180406F700181A26 /* libEngine.a */,
+				E60E51F1180406F700181A26 /* libEngine Mac.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E60E51FB1804078D00181A26 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E60E51FC1804078D00181A26 /* AppKit.framework */,
+				E60E51FD1804078D00181A26 /* CoreData.framework */,
+				E60E51FE1804078D00181A26 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		E60E52461804098900181A26 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E60E52471804098900181A26 /* Main.cpp */,
+				E60E52481804098900181A26 /* Main.h */,
+			);
+			name = Source;
+			path = ../../Source;
+			sourceTree = "<group>";
+		};
+		E60E524C180409F500181A26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E60E5251180409F500181A26 /* libEngine.a */,
+				E60E5253180409F500181A26 /* libEngine Mac.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E60E51B61804069C00181A26 /* UndeadRising */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E60E51E31804069C00181A26 /* Build configuration list for PBXNativeTarget "UndeadRising" */;
+			buildPhases = (
+				E60E51B31804069C00181A26 /* Sources */,
+				E60E51B41804069C00181A26 /* Frameworks */,
+				E60E51B51804069C00181A26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E60E52301804083500181A26 /* PBXTargetDependency */,
+			);
+			name = UndeadRising;
+			productName = UndeadRising;
+			productReference = E60E51B71804069C00181A26 /* UndeadRising.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E60E51D11804069C00181A26 /* UndeadRisingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E60E51E61804069C00181A26 /* Build configuration list for PBXNativeTarget "UndeadRisingTests" */;
+			buildPhases = (
+				E60E51CE1804069C00181A26 /* Sources */,
+				E60E51CF1804069C00181A26 /* Frameworks */,
+				E60E51D01804069C00181A26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E60E51D81804069C00181A26 /* PBXTargetDependency */,
+			);
+			name = UndeadRisingTests;
+			productName = UndeadRisingTests;
+			productReference = E60E51D21804069C00181A26 /* UndeadRisingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E60E5237180408EF00181A26 /* UndeadRising Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E60E523E180408F000181A26 /* Build configuration list for PBXNativeTarget "UndeadRising Mac" */;
+			buildPhases = (
+				E60E5234180408EF00181A26 /* Sources */,
+				E60E5235180408EF00181A26 /* Frameworks */,
+				E60E5236180408EF00181A26 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E60E5255180409FF00181A26 /* PBXTargetDependency */,
+				E60E5242180408F700181A26 /* PBXTargetDependency */,
+			);
+			name = "UndeadRising Mac";
+			productName = "UndeadRising Mac";
+			productReference = E60E5238180408EF00181A26 /* UndeadRising Mac */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E60E51AF1804069C00181A26 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = LunaEngine;
+				TargetAttributes = {
+					E60E51D11804069C00181A26 = {
+						TestTargetID = E60E51B61804069C00181A26;
+					};
+				};
+			};
+			buildConfigurationList = E60E51B21804069C00181A26 /* Build configuration list for PBXProject "UndeadRising" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E60E51AE1804069C00181A26;
+			productRefGroup = E60E51B81804069C00181A26 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E60E51EA180406F600181A26 /* Products */;
+					ProjectRef = E60E51E9180406F600181A26 /* Engine.xcodeproj */;
+				},
+				{
+					ProductGroup = E60E524C180409F500181A26 /* Products */;
+					ProjectRef = E60E524B180409F500181A26 /* Engine.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				E60E51B61804069C00181A26 /* UndeadRising */,
+				E60E51D11804069C00181A26 /* UndeadRisingTests */,
+				E60E5237180408EF00181A26 /* UndeadRising Mac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E60E51EF180406F700181A26 /* libEngine.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libEngine.a;
+			remoteRef = E60E51EE180406F700181A26 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E60E51F1180406F700181A26 /* libEngine Mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libEngine Mac.a";
+			remoteRef = E60E51F0180406F700181A26 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E60E5251180409F500181A26 /* libEngine.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libEngine.a;
+			remoteRef = E60E5250180409F500181A26 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E60E5253180409F500181A26 /* libEngine Mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libEngine Mac.a";
+			remoteRef = E60E5252180409F500181A26 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E60E51B51804069C00181A26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E60E51C51804069C00181A26 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E60E51D01804069C00181A26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E60E51DE1804069C00181A26 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E60E51B31804069C00181A26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E60E52491804098900181A26 /* Main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E60E51CE1804069C00181A26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E60E51E01804069C00181A26 /* UndeadRisingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E60E5234180408EF00181A26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E60E524A1804098900181A26 /* Main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E60E51D81804069C00181A26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E60E51B61804069C00181A26 /* UndeadRising */;
+			targetProxy = E60E51D71804069C00181A26 /* PBXContainerItemProxy */;
+		};
+		E60E52301804083500181A26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Engine;
+			targetProxy = E60E522F1804083500181A26 /* PBXContainerItemProxy */;
+		};
+		E60E5242180408F700181A26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Engine Mac";
+			targetProxy = E60E5241180408F700181A26 /* PBXContainerItemProxy */;
+		};
+		E60E5255180409FF00181A26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Engine Mac";
+			targetProxy = E60E5254180409FF00181A26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E60E51C31804069C00181A26 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E60E51C41804069C00181A26 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E60E51DC1804069C00181A26 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E60E51DD1804069C00181A26 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E60E51E11804069C00181A26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../../LunaEngine/Engine,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E60E51E21804069C00181A26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../../LunaEngine/Engine,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E60E51E41804069C00181A26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UndeadRising/UndeadRising-Prefix.pch";
+				INFOPLIST_FILE = "UndeadRising/UndeadRising-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E60E51E51804069C00181A26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UndeadRising/UndeadRising-Prefix.pch";
+				INFOPLIST_FILE = "UndeadRising/UndeadRising-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E60E51E71804069C00181A26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UndeadRising.app/UndeadRising";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UndeadRising/UndeadRising-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "UndeadRisingTests/UndeadRisingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		E60E51E81804069C00181A26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UndeadRising.app/UndeadRising";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UndeadRising/UndeadRising-Prefix.pch";
+				INFOPLIST_FILE = "UndeadRisingTests/UndeadRisingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		E60E523F180408F000181A26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Nishry/Documents/LunaEngine/Engine/Externals/AngelScript/iOS/OSX,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E60E5240180408F000181A26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Nishry/Documents/LunaEngine/Engine/Externals/AngelScript/iOS/OSX,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E60E51B21804069C00181A26 /* Build configuration list for PBXProject "UndeadRising" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E60E51E11804069C00181A26 /* Debug */,
+				E60E51E21804069C00181A26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E60E51E31804069C00181A26 /* Build configuration list for PBXNativeTarget "UndeadRising" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E60E51E41804069C00181A26 /* Debug */,
+				E60E51E51804069C00181A26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E60E51E61804069C00181A26 /* Build configuration list for PBXNativeTarget "UndeadRisingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E60E51E71804069C00181A26 /* Debug */,
+				E60E51E81804069C00181A26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E60E523E180408F000181A26 /* Build configuration list for PBXNativeTarget "UndeadRising Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E60E523F180408F000181A26 /* Debug */,
+				E60E5240180408F000181A26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E60E51AF1804069C00181A26 /* Project object */;
+}

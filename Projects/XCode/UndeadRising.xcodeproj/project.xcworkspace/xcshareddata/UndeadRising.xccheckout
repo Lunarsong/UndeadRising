@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>092EA936-3A56-4E15-8260-CED58831B156</string>
+	<key>IDESourceControlProjectName</key>
+	<string>UndeadRising</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>84BBD7FC-0EFA-4188-A607-507B69A99EC8</key>
+		<string>https://github.com/Lunarsong/LunaEngine.git</string>
+		<key>A8B34594-8E58-4421-94AA-2AAF1731635E</key>
+		<string>https://github.com/Lunarsong/UndeadRising.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Projects/XCode/UndeadRising/UndeadRising.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>84BBD7FC-0EFA-4188-A607-507B69A99EC8</key>
+		<string>../../../../../LunaEngine</string>
+		<key>A8B34594-8E58-4421-94AA-2AAF1731635E</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Lunarsong/UndeadRising.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A8B34594-8E58-4421-94AA-2AAF1731635E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>84BBD7FC-0EFA-4188-A607-507B69A99EC8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LunaEngine</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A8B34594-8E58-4421-94AA-2AAF1731635E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>UndeadRising</string>
+		</dict>
+	</array>
+</dict>
+</plist>

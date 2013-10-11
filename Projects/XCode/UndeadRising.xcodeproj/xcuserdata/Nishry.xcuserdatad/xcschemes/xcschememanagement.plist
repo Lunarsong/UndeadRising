@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>UndeadRising Mac.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>UndeadRising.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>E60E51B61804069C00181A26</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E60E51D11804069C00181A26</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E60E51F71804078D00181A26</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E60E52161804078D00181A26</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E60E5237180408EF00181A26</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
