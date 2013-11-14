@@ -17,9 +17,11 @@
 #include <Core/Process/Process.h>
 #include <Game/Entities/Components/Rendering/SkyBox.h>
 #include <Game/Entities/Components/Rendering/MeshComponent.h>
+#include <Game/Entities/Components/Rendering/AtmosphericScattering.h>
 #include "IslandData.h"
 #include <Core/Input/InputManager.h>
 #include "SteeringComponent.h"
+
 using namespace Engine;
 
 class GameProcess : public Process, public IMouseHandler
@@ -48,4 +50,6 @@ private:
     
     Entity* m_pMrBitey;
     SteeringComponent* m_pSteering;
+    
+    AtmosphericScattering* m_pAtmosphere;
 };

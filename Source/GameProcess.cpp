@@ -11,7 +11,6 @@
 #include <Game/Entities/Components/Rendering/Particles/ParticleEmitter.h>
 #include <Game/Entities/Components/Rendering/Particles/Processors/SpawnPositionProcessors.h>
 #include <Game/Entities/Components/Rendering/Particles/Processors/SimulationProcessors.h>
-#include <Game/Entities/Components/Rendering/AtmosphericScattering.h>
 #include "Combat.h"
 
 
@@ -263,7 +262,8 @@ void GameProcess::VOnInit(void)
 
     delete [] pBlendMap;
     
-    Material* pSplattingMaterial = new Material();
+    StructuredMaterial<Vector4>* pSplattingMaterial = new StructuredMaterial<Vector4>();
+    pSplattingMaterial->GetBuffer()->VAddProperty( "u_vLightDirection", BufferProperty::BP_VECTOR3 );
     
     IShaderProgram* pProgram = IRenderer::CreateShaderProgram();
     IVertexShader* pVertexShader = IRenderer::CreateVertexShader();
@@ -361,10 +361,10 @@ void GameProcess::VOnInit(void)
     m_pMrBitey = pEntity;
     
     pEntity = Game::CreateEntity();
-    AtmosphericScattering* pAtmosphere = new AtmosphericScattering();
-    pEntity->AddComponent( pAtmosphere );
-    pAtmosphere->Start();
-    pAtmosphere->Release();
+    m_pAtmosphere = new AtmosphericScattering();
+    pEntity->AddComponent( m_pAtmosphere );
+    m_pAtmosphere->Start();
+    m_pAtmosphere->Release();
 }
 
 void GameProcess::VOnUpdate( const float fDeltaSeconds )
@@ -390,7 +390,7 @@ void GameProcess::VOnUpdate( const float fDeltaSeconds )
         //m_pMrBitey->SetTransform( matTransform );
     }
     
-    
+    ((StructuredMaterial<Vector4>*)m_pHeightMapEntity->GetMaterial())->GetData() = m_pAtmosphere->GetAtmosphericSettings().v3LightPos;
 }
 
 void GameProcess::VOnSuccess(void)
