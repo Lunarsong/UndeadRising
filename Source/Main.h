@@ -6,9 +6,5 @@
 //  Copyright (c) 2013 LunaEngine. All rights reserved.
 //
 
-#ifndef __UndeadRising__Main__
-#define __UndeadRising__Main__
+#pragma once
 
-#include <iostream>
-
-#endif /* defined(__UndeadRising__Main__) */
