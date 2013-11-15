@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../LunaEngine/Engine/Rendering/OpenGL/GLRenderContext.cpp"
-            timestampString = "406154610.479745"
+            timestampString = "406165631.471474"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "458"
-            endingLineNumber = "458"
+            startingLineNumber = "465"
+            endingLineNumber = "465"
             landmarkName = "GLRenderContext::VSetCullMode( RendererCullMode eCullMode )"
             landmarkType = "5">
          </BreakpointContent>
@@ -88,7 +88,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../LunaEngine/Engine/Game/Entities/Components/Rendering/HeightmapComponent.cpp"
-            timestampString = "405777915.616151"
+            timestampString = "406167476.061218"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "306"
@@ -126,6 +126,32 @@
             startingLineNumber = "111"
             endingLineNumber = "111"
             landmarkName = "RenderUtils::DrawRectangle( const Vector2&amp; vPosition, const Vector2&amp; vSize, const ColorF&amp; color )"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../LunaEngine/Engine/Game/Entities/Components/Rendering/AtmosphericScattering.cpp"
+            timestampString = "406167297.522731"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "268"
+            endingLineNumber = "268"
+            landmarkName = "AtmosphericScattering::VRender( IRenderContext* pRenderContext )"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

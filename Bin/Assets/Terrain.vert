@@ -13,7 +13,7 @@ void main()
     v_vColor = u_vColor;
     v_vNormal = u_vNormal;
     v_vTexCoord = u_vTexCoords;
-    v_vTileTexCoord = u_vTexCoords * 512 * 2;
+    v_vTileTexCoord = u_vTexCoords * 512.0 * 2.0;
     
     gl_Position = mWorldViewProjection * u_vPosition;
 }

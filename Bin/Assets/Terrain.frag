@@ -29,5 +29,5 @@ void main()
 
     float fLightIntensity = dot( v_vNormal, u_vLightDirection );
     gl_FragColor = vFinalColor * max( 0.2, fLightIntensity );
-    gl_FragColor.a = 1.0f;
+    gl_FragColor.a = 1.0;
 }
