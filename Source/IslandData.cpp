@@ -65,13 +65,13 @@ void IslandData::Generate( int iWidth, int iHeight )
     noise.SetOctaves( 16.0f );
     noise.SetPersistence( 0.5f );
     noise.SetScale( 0.005f );
-    noise.SetBounds( -0.35f, 0.9f );
+    noise.SetBounds( -0.25f, 1.0f );
         
     for ( unsigned int y = 0; y < iHeight; ++y )
     {
         for ( unsigned int x = 0; x < iWidth; ++x )
         {
-            (*this)( x ,  y ) = noise.Noise( x, y ) * 2.0f;
+            (*this)( x ,  y ) = noise.Noise( x, y );
         }
     }
         
@@ -616,19 +616,15 @@ void IslandData::GenerateMoisture()
 				float fMoisture = GetMoisture( iX, iY );
 				float fHeight = GetHeight( iX, iY );
 
-				int iHeightIndex = (int)(fHeight * 3.2f);
+				int iHeightIndex = (int)(fHeight * 4.8f);
 				int iMoistureIndex = (int)(fMoisture * 5.2);
 
 				m_pBiomeMap[ iY * m_uiSizeX + iX ] = eBiomeMap[iHeightIndex][iMoistureIndex];
-                if ( iMoistureIndex == 5 )// || iHeightIndex == 0  )
+
+                if ( iMoistureIndex >= 5 || iHeightIndex > 3 )
                 {
-                    int i = 0;
-                    i *= 2;
-                }
-                if ( iMoistureIndex > 5 || iHeightIndex > 3 )
-                {
-                    int i = 0;
-                    i *= 2;
+                    iMoistureIndex = 5;
+                    iHeightIndex = 3;
                 }
 			}
 		}

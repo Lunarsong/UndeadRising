@@ -30,4 +30,18 @@ void main()
     float fLightIntensity = dot( v_vNormal, u_vLightDirection );
     gl_FragColor = vFinalColor * max( 0.2, fLightIntensity );
     gl_FragColor.a = 1.0;
+    
+    const float LOG2 = 1.442695;
+    float fFogDensity = 0.0005;
+    vec4 vFogColor = vec4( 0.5, 0.5, 0.5, 1.0 );
+    
+    float z = gl_FragCoord.z / gl_FragCoord.w;
+    float fogFactor = exp2( -fFogDensity *
+                           fFogDensity *
+                           z *
+                           z *
+                           LOG2 );
+    fogFactor = clamp(fogFactor, 0.0, 1.0);
+    
+    gl_FragColor = mix( vFogColor, gl_FragColor, fogFactor );
 }

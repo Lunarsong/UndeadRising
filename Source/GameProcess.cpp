@@ -287,11 +287,11 @@ void GameProcess::VOnInit(void)
     pProgram->VLink();
     
     pSplattingMaterial->SetShaderProgram( pProgram );
+    pSplattingMaterial->AddTextureRegister( "Desert" );
     pSplattingMaterial->AddTextureRegister( "Grass" );
     pSplattingMaterial->AddTextureRegister( "Water" );
     pSplattingMaterial->AddTextureRegister( "Snow" );
     pSplattingMaterial->AddTextureRegister( "Rock" );
-    pSplattingMaterial->AddTextureRegister( "Desert" );
     pSplattingMaterial->AddTextureRegister( "BlendMap" );
     
     ITexture* pTexture = AssetManager::Get().GetAsset<ITexture>( "Desert.png" );
