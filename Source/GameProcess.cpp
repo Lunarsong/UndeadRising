@@ -278,9 +278,6 @@ void GameProcess::VOnInit(void)
     if ( pPixelShader->VCreateFromMemory( pPixelResource->Buffer(), pPixelResource->Size() ) == false )
         throw "error";
     
-    pVertexResource->Release();
-    pPixelResource->Release();
-    
     pProgram->VSetPixelShader( pPixelShader );
     pProgram->VSetVertexShader( pVertexShader );
     pVertexShader->VAddAttribute( "u_vPosition", Position_VertexData );
@@ -299,23 +296,18 @@ void GameProcess::VOnInit(void)
     
     ITexture* pTexture = AssetManager::Get().GetAsset<ITexture>( "Desert.png" );
     pSplattingMaterial->SetTexture( 0, pTexture );
-    pTexture->Release();
     
     pTexture = AssetManager::Get().GetAsset<ITexture>( "Grass.png" );
     pSplattingMaterial->SetTexture( 1, pTexture );
-    pTexture->Release();
     
     pTexture = AssetManager::Get().GetAsset<ITexture>( "Water.png" );
     pSplattingMaterial->SetTexture( 2, pTexture );
-    pTexture->Release();
     
     pTexture = AssetManager::Get().GetAsset<ITexture>( "Snow.png" );
     pSplattingMaterial->SetTexture( 3, pTexture );
-    pTexture->Release();
     
     pTexture = AssetManager::Get().GetAsset<ITexture>( "Rock.png" );
     pSplattingMaterial->SetTexture( 4, pTexture );
-    pTexture->Release();
     
     pSplattingMaterial->SetTexture( 5, pBlendMapTexture );
     
