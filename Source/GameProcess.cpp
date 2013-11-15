@@ -17,11 +17,13 @@
 GameProcess::GameProcess()
 {
     InputManager::Get()->AddMouseHandler( this );
+    InputManager::Get()->AddTouchHandler( this );
 }
 
 GameProcess::~GameProcess()
 {
     InputManager::Get()->RemoveMouseHandler( this );
+    InputManager::Get()->RemoveTouchHandler( this );
 }
 
 void GameProcess::VOnInit(void)
@@ -32,8 +34,8 @@ void GameProcess::VOnInit(void)
     pEntity->AddComponent( pCamera );
     pCamera->SetClearColor( ColorF::BLACK );
     pCamera->Release();
-    pCamera->SetPosition( Vector4( 0.0f, 1.0f, -10.0f ) );
-    pCamera->SetDirection( Vector4::ZERO );
+    pCamera->SetPosition( Vector4( 2000.0f, 50.0f, 2000.0f ) );
+    pCamera->SetDirection( Vector4( 0.0f, 0.0f, 1.0f ) );
     pCamera->Start();
     
     pEntity = Game::CreateEntity();
@@ -505,5 +507,37 @@ bool GameProcess::VOnMouseButtonDClick( const int iButtonIndex, const Vector3& v
 
 bool GameProcess::VOnMouseWheel( const Vector3& vPosition, const Vector3& vDelta )
 {
+    return false;
+}
+
+bool GameProcess::VOnTouchStart( const int iTouchIndex, const Vector2& vPosition, const int iPressure )
+{
+    
+    return false;
+}
+
+bool GameProcess::VOnTouchEnd( const int iTouchIndex, const Vector2& vPosition, const int iPressure )
+{
+    return false;
+}
+
+bool GameProcess::VOnTouchCancel( const int iTouchIndex, const Vector2& vPosition, const int iPressure )
+{
+    return false;
+}
+
+bool GameProcess::VOnTouchMove( const int iTouchIndex, const Vector2& vPosition, const Vector2& vDeltaPosition, const int iPressure )
+{
+    Vector4 vCameraPosition = m_pCamera->GetPosition();
+    vCameraPosition.x += vDeltaPosition.x;
+    vCameraPosition.z += vDeltaPosition.y;
+    
+    if ( m_pHeightMapEntity->GetHeight( vCameraPosition.x, vCameraPosition.z, vCameraPosition.y ) )
+    {
+        vCameraPosition.y += 10.0f;
+    }
+    
+    m_pCamera->SetPosition( vCameraPosition );
+    
     return false;
 }

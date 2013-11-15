@@ -24,7 +24,7 @@
 
 using namespace Engine;
 
-class GameProcess : public Process, public IMouseHandler
+class GameProcess : public Process, public IMouseHandler, public ITouchHandler
 {
 public:
     GameProcess();
@@ -41,6 +41,11 @@ public:
     virtual bool VOnMouseButtonUp( const int iButtonIndex, const Vector3& vPosition );
     virtual bool VOnMouseButtonDClick( const int iButtonIndex, const Vector3& vPosition );
     virtual bool VOnMouseWheel( const Vector3& vPosition, const Vector3& vDelta );
+    
+    virtual bool VOnTouchStart( const int iTouchIndex, const Vector2& vPosition, const int iPressure );
+    virtual bool VOnTouchEnd( const int iTouchIndex, const Vector2& vPosition, const int iPressure );
+    virtual bool VOnTouchCancel( const int iTouchIndex, const Vector2& vPosition, const int iPressure );
+    virtual bool VOnTouchMove( const int iTouchIndex, const Vector2& vPosition, const Vector2& vDeltaPosition, const int iPressure );
 
 private:
     IslandData m_IslandData;
