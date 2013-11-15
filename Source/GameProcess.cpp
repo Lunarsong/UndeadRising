@@ -529,7 +529,7 @@ bool GameProcess::VOnTouchCancel( const int iTouchIndex, const Vector2& vPositio
 bool GameProcess::VOnTouchMove( const int iTouchIndex, const Vector2& vPosition, const Vector2& vDeltaPosition, const int iPressure )
 {
     Vector4 vCameraPosition = m_pCamera->GetPosition();
-    vCameraPosition.x += vDeltaPosition.x;
+    vCameraPosition.x -= vDeltaPosition.x;
     vCameraPosition.z += vDeltaPosition.y;
     
     if ( m_pHeightMapEntity->GetHeight( vCameraPosition.x, vCameraPosition.z, vCameraPosition.y ) )
