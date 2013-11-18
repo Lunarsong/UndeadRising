@@ -83,7 +83,9 @@ void Start()
     ////
     
     FolderAssetBundle* pBundle = new FolderAssetBundle( FileUtils::GetWorkingFolder() );
+	
 	AssetManager::Get().AddAssetBundle( pBundle );
+	AssetManager::Get().AddAssetBundle( new FolderAssetBundle( FileUtils::GetWorkingFolder() + "Assets/" ) );
     
     AssetManager::Get().RegisterLoader( HashedString( "*.png" ), new ImageAssetLoader() );
     AssetManager::Get().RegisterLoader( HashedString( "*.jpg" ), new ImageAssetLoader() );

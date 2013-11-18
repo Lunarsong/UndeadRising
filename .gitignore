@@ -11,3 +11,15 @@
 *.lai
 *.la
 *.a
+
+
+obj/
+ipch/
+[Dd]ebug/
+[Rr]elease*/
+#[Aa]ssets/
+*.exe
+*.sdf
+*.filters
+*.user
+*.suo

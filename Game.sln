@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Game", "Projects\VS2012\Game.vcxproj", "{61D9EBE6-F470-4284-A41D-E214256D5015}"
+	ProjectSection(ProjectDependencies) = postProject
+		{903DA5A8-685F-430B-90BE-9C57A5E80613} = {903DA5A8-685F-430B-90BE-9C57A5E80613}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Engine", "..\LunaEngine\Engine\Engine.vcxproj", "{903DA5A8-685F-430B-90BE-9C57A5E80613}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Tegra-Android = Debug|Tegra-Android
+		Debug|Win32 = Debug|Win32
+		Release|Tegra-Android = Release|Tegra-Android
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61D9EBE6-F470-4284-A41D-E214256D5015}.Debug|Tegra-Android.ActiveCfg = Debug|Win32
+		{61D9EBE6-F470-4284-A41D-E214256D5015}.Debug|Win32.ActiveCfg = Debug|Win32
+		{61D9EBE6-F470-4284-A41D-E214256D5015}.Debug|Win32.Build.0 = Debug|Win32
+		{61D9EBE6-F470-4284-A41D-E214256D5015}.Release|Tegra-Android.ActiveCfg = Release|Win32
+		{61D9EBE6-F470-4284-A41D-E214256D5015}.Release|Win32.ActiveCfg = Release|Win32
+		{61D9EBE6-F470-4284-A41D-E214256D5015}.Release|Win32.Build.0 = Release|Win32
+		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Debug|Tegra-Android.ActiveCfg = Debug|Tegra-Android
+		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Debug|Tegra-Android.Build.0 = Debug|Tegra-Android
+		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Debug|Win32.ActiveCfg = Debug|Win32
+		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Debug|Win32.Build.0 = Debug|Win32
+		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Release|Tegra-Android.ActiveCfg = Release|Tegra-Android
+		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Release|Tegra-Android.Build.0 = Release|Tegra-Android
+		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Release|Win32.ActiveCfg = Release|Win32
+		{903DA5A8-685F-430B-90BE-9C57A5E80613}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
