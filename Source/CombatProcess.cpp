@@ -23,8 +23,11 @@ CombatProcess::~CombatProcess()
 
 void CombatProcess::VOnInit(void)
 {
-    m_pCamera->SetPosition( m_pEntity0->GetTransform().GetPosition() + Vector3( 0.0f, 5.0f, -15.0f ) );
-    m_pCamera->LookAtTarget( m_pEntity0->GetTransform().GetPosition() );
+    Vector4 vPosition = m_pEntity0->GetTransform().GetPosition();
+    vPosition += -m_pEntity0->GetTransform().GetDirection() * 20.0f + Vector4( 0.0f, 15.0f, 0.0f );
+    m_pCamera->SetPosition(  vPosition );
+    //m_pCamera->LookAtTarget( m_pEntity0->GetTransform().GetPosition() );
+    m_pCamera->SetDirection( (vPosition - m_pCamera->GetPosition()).Normalize() );
     
     m_pCombatScreen = UserInterface::AddScreenFromFile( "Combat", "CombatScreen.xml" );
     assert( m_pCombatScreen );

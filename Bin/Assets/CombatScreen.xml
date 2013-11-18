@@ -2,15 +2,68 @@
 	<Size x="1280" y="720"/>
 	
 	<UI>
-		<RelPosition x="0.5" y="1.0" />
-		<Position x="0" y="-95" />
-		<Size x="0.0" y="0.0" />
+		<RelPosition x="0.0" y="0.0" />
+		<Position x="0" y="0" />
+		<Size x="1.0" y="1.0" />
+        
+        <!-- Health Bar -->
+        <Color>
+            <Position x="10" y="10" />
+            <Size x="200.0" y="22.0" />
+            <Color r="50" b="50" g="50" />
+            
+            <Color>
+                <Position x="4" y="4" />
+                <Size x="192.0" y="14.0" />
+                <Color r="255" b="0" g="0" />
+            </Color>
+        </Color>
+        
+        <!-- Mana Bar -->
+        <Color>
+            <Position x="10" y="40" />
+            <Size x="200.0" y="22.0" />
+            <Color r="50" b="50" g="50" />
+            
+            <Color>
+                <Position x="4" y="4" />
+                <Size x="192.0" y="14.0" />
+                <Color r="0" b="255" g="0" />
+            </Color>
+        </Color>
 		
-		<Color>
-			<Color r="50" b="50" g="50" />
-			<Size x="500" y="80.0" />
-			<Alignment>Bottom</Alignment>
-		</Color>
+        <!-- Action Buttons -->
+        <UI>
+            <RelPosition x="1.0" y="1.0" />
+            <Button>
+                <Position x="-10" y="-10" />
+                <Color r="50" b="50" g="50" />
+                <Size x="60" y="60.0" />
+                <Alignment>BottomRight</Alignment>
+            </Button>
+            
+            <Button>
+                <Position x="-80" y="-10" />
+                <Color r="50" b="50" g="50" />
+                <Size x="60" y="60.0" />
+                <Alignment>BottomRight</Alignment>
+            </Button>
+            
+            <Button>
+                <Position x="-10" y="-80" />
+                <Color r="50" b="50" g="50" />
+                <Size x="60" y="60.0" />
+                <Alignment>BottomRight</Alignment>
+            </Button>
+            
+            <Button>
+                <Position x="-80" y="-80" />
+                <Color r="50" b="50" g="50" />
+                <Size x="60" y="60.0" />
+                <Alignment>BottomRight</Alignment>
+            </Button>
+        </UI>
+        
 		
 	</UI>
 </Monitor>

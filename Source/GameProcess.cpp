@@ -34,7 +34,7 @@ void GameProcess::VOnInit(void)
     pEntity->AddComponent( pCamera );
     pCamera->SetClearColor( ColorF::BLACK );
     pCamera->Release();
-    pCamera->SetPosition( Vector4( 2000.0f, 50.0f, 2000.0f ) );
+    pCamera->SetPosition( Vector4( 2000.0f, 30.0f, 2000.0f ) );
     pCamera->SetDirection( Vector4( 0.0f, 0.0f, 1.0f ) );
     pCamera->Start();
     
@@ -349,7 +349,7 @@ void GameProcess::VOnInit(void)
     m_pSteering = new SteeringComponent();
     pEntity->AddComponent( m_pSteering );
     m_pSteering->SetSpeed( 15.0f );
-    m_pSteering->Start();
+//    m_pSteering->Start();
     m_pSteering->Release();
     
     m_pMrBitey = pEntity;
@@ -428,71 +428,83 @@ bool GameProcess::VOnMouseButtonUp( const int iButtonIndex, const Vector3& vPosi
             if ( fDistance < 0.0f )
                 fDistance = -fDistance;
             
-            m_pSteering->SetTargetPosition( vRayPos + vRayDir * fDistance + Vector4( 0.0f, 0.0f, 0.0f ) );
+            Matrix matTransform = m_pMrBitey->GetTransform();
+            matTransform.SetPosition( vRayPos + vRayDir * fDistance + Vector3   ::UP );
+            m_pMrBitey->SetTransform( matTransform );
+//            m_pSteering->SetTargetPosition( vRayPos + vRayDir * fDistance + Vector4( 0.0f, 0.0f, 0.0f ) );
             
             return false;
-            
-            
-            /*Matrix matTransform;
-            matTransform.BuildScale( Vector4::ONE * 2.0f );
-            vRayDir.Normalize();
-            matTransform.SetPosition( vRayPos + vRayDir * fDistance + Vector4( 0.0f, 1.0f, 0.0f ) );
-
-            Entity* pEntity = Game::CreateEntity( matTransform );
-            MeshComponent* pMeshComponent = new MeshComponent();
-            pEntity->AddComponent( pMeshComponent );
-            Mesh* pMesh = Mesh::CreateBox();
-            pMeshComponent->SetMesh( pMesh );
-            pMesh->Release();
-            pMeshComponent->Start();
-            pMeshComponent->Release();
-            
-            StateMachineComponent* pStateMachine = new StateMachineComponent();
-            pEntity->AddComponent( pStateMachine );
-            //pStateMachine->Start();
-            pStateMachine->Release();
-            
-            
-            ParticleEmitter* pSystem = new ParticleEmitter();
-            pEntity->AddComponent( pSystem );
-            pSystem->Start();
-            pSystem->SetTexture( "explosion.png" );
-            
-            EmitterProcessor* pPositionProcessor = new SphericalSpawnPositionProcessor( 0.5f );
-            pSystem->AddProcessor( pPositionProcessor );
-            pPositionProcessor->Release();
-            
-            pPositionProcessor = new SpawnPositionProcessor( Vector3( 0.0f, 2.0f, 0.0f ) );
-            pSystem->AddProcessor( pPositionProcessor );
-            pPositionProcessor->Release();
-            
-            //pPositionProcessor = new VelocityOverAgeProcessor( new CurveModifier( Vector3( 0.0f, 2.0f, 0.0f ) * 5.0f, Vector3( 1.0f, 2.0f, 1.0f ) * 5.0f, Vector3( -1.0f, 2.0f, -1.0f ) * 5.0f, Vector3( 1.0f, 2.0f, 1.0f ) * 5.0f ) );
-            pPositionProcessor = new VelocityOverAgeProcessor( new ConstantEmitterModifier( Vector3::UP * 5.0f ) );
-            pSystem->AddProcessor( pPositionProcessor );
-            pPositionProcessor->Release();
-            
-            pPositionProcessor = new RadialVelocityProcessor( Vector3( 1.0f, 1.0f, 1.0f ) * 20.0f );
-            pSystem->AddProcessor( pPositionProcessor );
-            pPositionProcessor->Release();
-            
-            pPositionProcessor = new ColorOverAgeProcessor( new CurveModifier( Vector3::ZERO, Vector3( 1.0f, 0.0f, 0.0f ), Vector3( 0.0f, 1.0f, 0.0f ), Vector3( 0.0f, 0.0f, 1.0f ) ) );
-            pSystem->AddProcessor( pPositionProcessor );
-            pPositionProcessor->Release();
-             
-             pSystem->Release();*/
-            
         }
     }
     
     else if ( iButtonIndex == 1 )
     {
-        SceneNode* pSceneNode = SceneManager::Get()->VPickAndReturnClosest( vRayPos, vRayDir );
+        SceneNode* pSceneNode = SceneManager::Get()->VPickAndReturnClosest( vRayPos, vRayDir, &fDistance );
         if ( pSceneNode )
         {
             Entity* pEntity = pSceneNode->VGetEntity();
             if ( pEntity )
             {
-                Combat::InitiateCombat( m_pCamera, m_pMrBitey, pEntity );
+                if ( pEntity != m_pHeightMapEntity->GetOwner() )
+                {
+                    Matrix matTransform = m_pMrBitey->GetTransform();
+                    matTransform.SetPosition( pEntity->GetTransform().GetPosition() - Vector4( Vector4( 0.0f, 0.0f, -20.0f ) ) );
+                    m_pHeightMapEntity->GetHeight( matTransform.m[3][0], matTransform.m[3][2], matTransform.m[3][1] );
+                    m_pMrBitey->SetTransform( matTransform );
+                    
+                    Combat::InitiateCombat( m_pCamera, m_pMrBitey, pEntity );
+                }
+                
+                else
+                {
+                    Matrix matTransform;
+                    matTransform.BuildScale( Vector4::ONE * 2.0f );
+                    vRayDir.Normalize();
+                    matTransform.SetPosition( vRayPos + vRayDir * fDistance + Vector4( 0.0f, 1.0f, 0.0f ) );
+                    
+                    Entity* pEntity = Game::CreateEntity( matTransform );
+                    MeshComponent* pMeshComponent = new MeshComponent();
+                    pEntity->AddComponent( pMeshComponent );
+                    Mesh* pMesh = Mesh::CreateBox();
+                    pMeshComponent->SetMesh( pMesh );
+                    pMesh->Release();
+                    pMeshComponent->Start();
+                    pMeshComponent->Release();
+                    
+                    StateMachineComponent* pStateMachine = new StateMachineComponent();
+                    pEntity->AddComponent( pStateMachine );
+                    //pStateMachine->Start();
+                    pStateMachine->Release();
+                    
+                    
+                    /*ParticleEmitter* pSystem = new ParticleEmitter();
+                    pEntity->AddComponent( pSystem );
+                    pSystem->Start();
+                    pSystem->SetTexture( "explosion.png" );
+                    
+                    EmitterProcessor* pPositionProcessor = new SphericalSpawnPositionProcessor( 0.5f );
+                    pSystem->AddProcessor( pPositionProcessor );
+                    pPositionProcessor->Release();
+                    
+                    pPositionProcessor = new SpawnPositionProcessor( Vector3( 0.0f, 2.0f, 0.0f ) );
+                    pSystem->AddProcessor( pPositionProcessor );
+                    pPositionProcessor->Release();
+                    
+                    //pPositionProcessor = new VelocityOverAgeProcessor( new CurveModifier( Vector3( 0.0f, 2.0f, 0.0f ) * 5.0f, Vector3( 1.0f, 2.0f, 1.0f ) * 5.0f, Vector3( -1.0f, 2.0f, -1.0f ) * 5.0f, Vector3( 1.0f, 2.0f, 1.0f ) * 5.0f ) );
+                    pPositionProcessor = new VelocityOverAgeProcessor( new ConstantEmitterModifier( Vector3::UP * 5.0f ) );
+                    pSystem->AddProcessor( pPositionProcessor );
+                    pPositionProcessor->Release();
+                    
+                    pPositionProcessor = new RadialVelocityProcessor( Vector3( 1.0f, 1.0f, 1.0f ) * 20.0f );
+                    pSystem->AddProcessor( pPositionProcessor );
+                    pPositionProcessor->Release();
+                    
+                    pPositionProcessor = new ColorOverAgeProcessor( new CurveModifier( Vector3::ZERO, Vector3( 1.0f, 0.0f, 0.0f ), Vector3( 0.0f, 1.0f, 0.0f ), Vector3( 0.0f, 0.0f, 1.0f ) ) );
+                    pSystem->AddProcessor( pPositionProcessor );
+                    pPositionProcessor->Release();
+                    
+                    pSystem->Release();*/
+                }
             }
         }
     }

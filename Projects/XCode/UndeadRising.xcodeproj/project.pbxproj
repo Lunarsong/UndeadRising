@@ -11,12 +11,10 @@
 		E60E51BD1804069C00181A26 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E51BC1804069C00181A26 /* CoreGraphics.framework */; };
 		E60E51BF1804069C00181A26 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E51BE1804069C00181A26 /* UIKit.framework */; };
 		E60E51C51804069C00181A26 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E60E51C31804069C00181A26 /* InfoPlist.strings */; };
-		E60E51D41804069C00181A26 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E51D31804069C00181A26 /* XCTest.framework */; };
 		E60E51D51804069C00181A26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E51BA1804069C00181A26 /* Foundation.framework */; };
 		E60E51D61804069C00181A26 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E51BE1804069C00181A26 /* UIKit.framework */; };
 		E60E51DE1804069C00181A26 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E60E51DC1804069C00181A26 /* InfoPlist.strings */; };
 		E60E51E01804069C00181A26 /* UndeadRisingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E60E51DF1804069C00181A26 /* UndeadRisingTests.m */; };
-		E60E51F21804072400181A26 /* libEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E51EF180406F700181A26 /* libEngine.a */; };
 		E60E52491804098900181A26 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E60E52471804098900181A26 /* Main.cpp */; };
 		E60E524A1804098900181A26 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E60E52471804098900181A26 /* Main.cpp */; };
 		E60E525618040A0300181A26 /* libEngine Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E5253180409F500181A26 /* libEngine Mac.a */; };
@@ -104,34 +102,6 @@
 			remoteGlobalIDString = E60E51B61804069C00181A26;
 			remoteInfo = UndeadRising;
 		};
-		E60E51EE180406F700181A26 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E60E51E9180406F600181A26 /* Engine.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E63EA91417C69948006F1456;
-			remoteInfo = Engine;
-		};
-		E60E51F0180406F700181A26 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E60E51E9180406F600181A26 /* Engine.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E6D0BDBA17CE1F6500CAC564;
-			remoteInfo = "Engine Mac";
-		};
-		E60E522F1804083500181A26 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E60E51E9180406F600181A26 /* Engine.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = E63EA91317C69948006F1456;
-			remoteInfo = Engine;
-		};
-		E60E5241180408F700181A26 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E60E51E9180406F600181A26 /* Engine.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = E6D0BDB917CE1F6400CAC564;
-			remoteInfo = "Engine Mac";
-		};
 		E60E5250180409F500181A26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E60E524B180409F500181A26 /* Engine.xcodeproj */;
@@ -216,15 +186,9 @@
 		E60E51C41804069C00181A26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E60E51C81804069C00181A26 /* UndeadRising-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UndeadRising-Prefix.pch"; sourceTree = "<group>"; };
 		E60E51D21804069C00181A26 /* UndeadRisingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UndeadRisingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E60E51D31804069C00181A26 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
 		E60E51DB1804069C00181A26 /* UndeadRisingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UndeadRisingTests-Info.plist"; sourceTree = "<group>"; };
 		E60E51DD1804069C00181A26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E60E51DF1804069C00181A26 /* UndeadRisingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UndeadRisingTests.m; sourceTree = "<group>"; };
-		E60E51E9180406F600181A26 /* Engine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Engine.xcodeproj; path = ../../../../LunaEngine/Projects/iOS/Engine.xcodeproj; sourceTree = "<group>"; };
-		E60E51F91804078D00181A26 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		E60E51FC1804078D00181A26 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		E60E51FD1804078D00181A26 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		E60E51FE1804078D00181A26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E60E5238180408EF00181A26 /* UndeadRising Mac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "UndeadRising Mac"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E60E52471804098900181A26 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
 		E60E52481804098900181A26 /* Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Main.h; sourceTree = "<group>"; };
@@ -234,17 +198,17 @@
 		E60E525D18040AF300181A26 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
 		E60E525F18040AFB00181A26 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		E60E526118040B0400181A26 /* libangelscript.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libangelscript.a; path = ../../../LunaEngine/Engine/Externals/AngelScript/iOS/OSX/libangelscript.a; sourceTree = "<group>"; };
-		E65BD82F183561B800A51612 /* Dirt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Dirt.jpg; path = ../../Bin/Assets/Dirt.jpg; sourceTree = "<group>"; };
-		E65BD830183561B800A51612 /* Grass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Grass.jpg; path = ../../Bin/Assets/Grass.jpg; sourceTree = "<group>"; };
-		E65BD831183561B800A51612 /* Rock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Rock.jpg; path = ../../Bin/Assets/Rock.jpg; sourceTree = "<group>"; };
-		E65BD832183561B800A51612 /* Snow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Snow.jpg; path = ../../Bin/Assets/Snow.jpg; sourceTree = "<group>"; };
-		E65BD833183561B800A51612 /* Water.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Water.jpg; path = ../../Bin/Assets/Water.jpg; sourceTree = "<group>"; };
-		E65BD839183566C000A51612 /* Dirt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Dirt.png; path = ../../Bin/Assets/Dirt.png; sourceTree = "<group>"; };
-		E65BD83A183566C000A51612 /* Grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Grass.png; path = ../../Bin/Assets/Grass.png; sourceTree = "<group>"; };
-		E65BD83B183566C000A51612 /* Rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Rock.png; path = ../../Bin/Assets/Rock.png; sourceTree = "<group>"; };
-		E65BD83C183566C000A51612 /* Snow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Snow.png; path = ../../Bin/Assets/Snow.png; sourceTree = "<group>"; };
-		E65BD83D183566C000A51612 /* Water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Water.png; path = ../../Bin/Assets/Water.png; sourceTree = "<group>"; };
-		E65BD8431835735B00A51612 /* Desert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Desert.png; path = ../../Bin/Assets/Desert.png; sourceTree = "<group>"; };
+		E65BD82F183561B800A51612 /* Dirt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dirt.jpg; sourceTree = "<group>"; };
+		E65BD830183561B800A51612 /* Grass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Grass.jpg; sourceTree = "<group>"; };
+		E65BD831183561B800A51612 /* Rock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Rock.jpg; sourceTree = "<group>"; };
+		E65BD832183561B800A51612 /* Snow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Snow.jpg; sourceTree = "<group>"; };
+		E65BD833183561B800A51612 /* Water.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Water.jpg; sourceTree = "<group>"; };
+		E65BD839183566C000A51612 /* Dirt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dirt.png; sourceTree = "<group>"; };
+		E65BD83A183566C000A51612 /* Grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grass.png; sourceTree = "<group>"; };
+		E65BD83B183566C000A51612 /* Rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rock.png; sourceTree = "<group>"; };
+		E65BD83C183566C000A51612 /* Snow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snow.png; sourceTree = "<group>"; };
+		E65BD83D183566C000A51612 /* Water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Water.png; sourceTree = "<group>"; };
+		E65BD8431835735B00A51612 /* Desert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Desert.png; sourceTree = "<group>"; };
 		E65BD8531835981E00A51612 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		E65BD8551835983300A51612 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		E65BD8591835984800A51612 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -258,10 +222,10 @@
 		E65BD86518359A8A00A51612 /* Rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rock.png; sourceTree = "<group>"; };
 		E65BD86618359A8A00A51612 /* Snow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snow.png; sourceTree = "<group>"; };
 		E65BD86918359A8A00A51612 /* Water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Water.png; sourceTree = "<group>"; };
-		E65BD87318359B8A00A51612 /* Terrain.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Terrain.frag; path = ../../Bin/Assets/Terrain.frag; sourceTree = "<group>"; };
-		E65BD87418359B8A00A51612 /* Terrain.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Terrain.vert; path = ../../Bin/Assets/Terrain.vert; sourceTree = "<group>"; };
-		E65BD8771835A00C00A51612 /* Terrain.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Terrain.frag; path = ../../Bin/Assets/Terrain.frag; sourceTree = "<group>"; };
-		E65BD8781835A00C00A51612 /* Terrain.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Terrain.vert; path = ../../Bin/Assets/Terrain.vert; sourceTree = "<group>"; };
+		E65BD87318359B8A00A51612 /* Terrain.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Terrain.frag; sourceTree = "<group>"; };
+		E65BD87418359B8A00A51612 /* Terrain.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Terrain.vert; sourceTree = "<group>"; };
+		E65BD8771835A00C00A51612 /* Terrain.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Terrain.frag; sourceTree = "<group>"; };
+		E65BD8781835A00C00A51612 /* Terrain.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Terrain.vert; sourceTree = "<group>"; };
 		E67326DC1820FB4C004B1FFB /* IslandData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IslandData.cpp; sourceTree = "<group>"; };
 		E67326DD1820FB4C004B1FFB /* IslandData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IslandData.h; sourceTree = "<group>"; };
 		E67B8368180990B600BA2394 /* sketch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sketch.png; sourceTree = "<group>"; };
@@ -282,11 +246,11 @@
 		E69A6E211832076900D035AE /* Combat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Combat.cpp; sourceTree = "<group>"; };
 		E69A6E221832076900D035AE /* Combat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Combat.h; sourceTree = "<group>"; };
 		E6A259B11832C6D9007758DC /* CombatScreen.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CombatScreen.xml; sourceTree = "<group>"; };
-		E6A259B61832C6ED007758DC /* CombatScreen.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = CombatScreen.xml; path = ../../Bin/Assets/CombatScreen.xml; sourceTree = "<group>"; };
+		E6A259B61832C6ED007758DC /* CombatScreen.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CombatScreen.xml; sourceTree = "<group>"; };
 		E6A259B91832CC56007758DC /* Arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Arial.ttf; sourceTree = "<group>"; };
 		E6A259BA1832CC56007758DC /* Consolas.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Consolas.ttf; sourceTree = "<group>"; };
 		E6B5D3B218223D9500092886 /* Avatar0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Avatar0.png; sourceTree = "<group>"; };
-		E6B5D3B418223DA000092886 /* Avatar0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Avatar0.png; path = ../../Bin/Assets/Avatar0.png; sourceTree = "<group>"; };
+		E6B5D3B418223DA000092886 /* Avatar0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Avatar0.png; sourceTree = "<group>"; };
 		E6DDEA761825285A003BE2E9 /* explosion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explosion.png; sourceTree = "<group>"; };
 		E6F3991D180E75A20077E733 /* Engine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Engine.xcodeproj; path = ../../../LunaEngine/Projects/iOS/Engine.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -302,7 +266,6 @@
 				E65BD8561835983300A51612 /* OpenGLES.framework in Frameworks */,
 				E65BD8601835986900A51612 /* libangelscript.a in Frameworks */,
 				E65BD85E1835986100A51612 /* libfreetype.a in Frameworks */,
-				E60E51F21804072400181A26 /* libEngine.a in Frameworks */,
 				E60E51BD1804069C00181A26 /* CoreGraphics.framework in Frameworks */,
 				E60E51BB1804069C00181A26 /* Foundation.framework in Frameworks */,
 			);
@@ -312,7 +275,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E60E51D41804069C00181A26 /* XCTest.framework in Frameworks */,
 				E60E51D61804069C00181A26 /* UIKit.framework in Frameworks */,
 				E60E51D51804069C00181A26 /* Foundation.framework in Frameworks */,
 			);
@@ -337,23 +299,6 @@
 		E60E51AE1804069C00181A26 = {
 			isa = PBXGroup;
 			children = (
-				E65BD8771835A00C00A51612 /* Terrain.frag */,
-				E65BD8781835A00C00A51612 /* Terrain.vert */,
-				E65BD87318359B8A00A51612 /* Terrain.frag */,
-				E65BD87418359B8A00A51612 /* Terrain.vert */,
-				E65BD8431835735B00A51612 /* Desert.png */,
-				E65BD839183566C000A51612 /* Dirt.png */,
-				E65BD83A183566C000A51612 /* Grass.png */,
-				E65BD83B183566C000A51612 /* Rock.png */,
-				E65BD83C183566C000A51612 /* Snow.png */,
-				E65BD83D183566C000A51612 /* Water.png */,
-				E65BD82F183561B800A51612 /* Dirt.jpg */,
-				E65BD830183561B800A51612 /* Grass.jpg */,
-				E65BD831183561B800A51612 /* Rock.jpg */,
-				E65BD832183561B800A51612 /* Snow.jpg */,
-				E65BD833183561B800A51612 /* Water.jpg */,
-				E6A259B61832C6ED007758DC /* CombatScreen.xml */,
-				E6B5D3B418223DA000092886 /* Avatar0.png */,
 				E6F3991D180E75A20077E733 /* Engine.xcodeproj */,
 				E67B8367180990B600BA2394 /* Assets */,
 				E60E52461804098900181A26 /* Source */,
@@ -389,13 +334,9 @@
 				E60E525B18040AE700181A26 /* IOKit.framework */,
 				E60E525918040AE300181A26 /* OpenGL.framework */,
 				E60E524B180409F500181A26 /* Engine.xcodeproj */,
-				E60E51E9180406F600181A26 /* Engine.xcodeproj */,
 				E60E51BA1804069C00181A26 /* Foundation.framework */,
 				E60E51BC1804069C00181A26 /* CoreGraphics.framework */,
 				E60E51BE1804069C00181A26 /* UIKit.framework */,
-				E60E51D31804069C00181A26 /* XCTest.framework */,
-				E60E51F91804078D00181A26 /* Cocoa.framework */,
-				E60E51FB1804078D00181A26 /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -436,25 +377,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E60E51EA180406F600181A26 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E60E51EF180406F700181A26 /* libEngine.a */,
-				E60E51F1180406F700181A26 /* libEngine Mac.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		E60E51FB1804078D00181A26 /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E60E51FC1804078D00181A26 /* AppKit.framework */,
-				E60E51FD1804078D00181A26 /* CoreData.framework */,
-				E60E51FE1804078D00181A26 /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
 		E60E52461804098900181A26 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -486,6 +408,23 @@
 		E67B8367180990B600BA2394 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				E65BD8771835A00C00A51612 /* Terrain.frag */,
+				E65BD8781835A00C00A51612 /* Terrain.vert */,
+				E65BD87318359B8A00A51612 /* Terrain.frag */,
+				E65BD87418359B8A00A51612 /* Terrain.vert */,
+				E65BD8431835735B00A51612 /* Desert.png */,
+				E65BD839183566C000A51612 /* Dirt.png */,
+				E65BD83A183566C000A51612 /* Grass.png */,
+				E65BD83B183566C000A51612 /* Rock.png */,
+				E65BD83C183566C000A51612 /* Snow.png */,
+				E65BD83D183566C000A51612 /* Water.png */,
+				E65BD82F183561B800A51612 /* Dirt.jpg */,
+				E65BD830183561B800A51612 /* Grass.jpg */,
+				E65BD831183561B800A51612 /* Rock.jpg */,
+				E65BD832183561B800A51612 /* Snow.jpg */,
+				E65BD833183561B800A51612 /* Water.jpg */,
+				E6A259B61832C6ED007758DC /* CombatScreen.xml */,
+				E6B5D3B418223DA000092886 /* Avatar0.png */,
 				E65BD86118359A8A00A51612 /* Desert.png */,
 				E65BD86218359A8A00A51612 /* Dirt.png */,
 				E65BD86318359A8A00A51612 /* explosion.png */,
@@ -545,7 +484,6 @@
 			);
 			dependencies = (
 				E65BD8581835983A00A51612 /* PBXTargetDependency */,
-				E60E52301804083500181A26 /* PBXTargetDependency */,
 			);
 			name = UndeadRising;
 			productName = UndeadRising;
@@ -582,7 +520,6 @@
 			);
 			dependencies = (
 				E60E5255180409FF00181A26 /* PBXTargetDependency */,
-				E60E5242180408F700181A26 /* PBXTargetDependency */,
 			);
 			name = "UndeadRising Mac";
 			productName = "UndeadRising Mac";
@@ -616,10 +553,6 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = E60E51EA180406F600181A26 /* Products */;
-					ProjectRef = E60E51E9180406F600181A26 /* Engine.xcodeproj */;
-				},
-				{
 					ProductGroup = E6F3991E180E75A20077E733 /* Products */;
 					ProjectRef = E6F3991D180E75A20077E733 /* Engine.xcodeproj */;
 				},
@@ -638,20 +571,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		E60E51EF180406F700181A26 /* libEngine.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libEngine.a;
-			remoteRef = E60E51EE180406F700181A26 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E60E51F1180406F700181A26 /* libEngine Mac.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libEngine Mac.a";
-			remoteRef = E60E51F0180406F700181A26 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		E60E5251180409F500181A26 /* libEngine.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -778,16 +697,6 @@
 			isa = PBXTargetDependency;
 			target = E60E51B61804069C00181A26 /* UndeadRising */;
 			targetProxy = E60E51D71804069C00181A26 /* PBXContainerItemProxy */;
-		};
-		E60E52301804083500181A26 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Engine;
-			targetProxy = E60E522F1804083500181A26 /* PBXContainerItemProxy */;
-		};
-		E60E5242180408F700181A26 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Engine Mac";
-			targetProxy = E60E5241180408F700181A26 /* PBXContainerItemProxy */;
 		};
 		E60E5255180409FF00181A26 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
