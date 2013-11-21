@@ -8,6 +8,8 @@
 
 #include "Character.h"
 
+const HashedString Character::g_hID( "Character" );
+
 Character::Character()
 {
     m_iHitPoints = m_Attributes.GetAttribute( CharacterAttributes::HitPoints );
@@ -23,3 +25,9 @@ const CharacterAttributes& Character::GetAttributes() const
 {
     return m_Attributes;
 }
+
+const HashedString& Character::GetType() const
+{
+	return g_hID;
+}
+

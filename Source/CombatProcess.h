@@ -32,4 +32,6 @@ private:
     SmartPtr<Entity>    m_pEntity1;
     
     UIElement* m_pCombatScreen;
+
+	void OnCombatButton( UIElement* pElement, void* pArgs );
 };

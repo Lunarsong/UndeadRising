@@ -21,6 +21,7 @@
 #include "IslandData.h"
 #include <Core/Input/InputManager.h>
 #include "SteeringComponent.h"
+#include <Game/Entities/Components/Rendering/ThirdPersonCamera.h>
 
 using namespace Engine;
 
@@ -51,7 +52,7 @@ private:
     IslandData m_IslandData;
     
     HeightmapComponent* m_pHeightMapEntity;
-    FreeCameraComponent* m_pCamera;
+    ThirdPersonCamera* m_pCamera;
     
     Entity* m_pMrBitey;
     SteeringComponent* m_pSteering;

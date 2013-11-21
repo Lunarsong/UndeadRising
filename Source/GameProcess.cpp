@@ -12,7 +12,8 @@
 #include <Game/Entities/Components/Rendering/Particles/Processors/SpawnPositionProcessors.h>
 #include <Game/Entities/Components/Rendering/Particles/Processors/SimulationProcessors.h>
 #include "Combat.h"
-
+#include <Game/Dialogue/UI/DialogueInterface.h>
+#include "TalkerComponent.h"
 
 GameProcess::GameProcess()
 {
@@ -28,8 +29,13 @@ GameProcess::~GameProcess()
 
 void GameProcess::VOnInit(void)
 {
+	DialogueInterface* pDialogue = new DialogueInterface( NULL, "DialogueInterface.xml", "Dialogue.xml" );
+	pDialogue->SetName( "Dialogue" );
+	BaseApplication::Get()->AttachProcess( pDialogue );
+	pDialogue->Release();
+
     Entity* pEntity = Game::CreateEntity();
-    FreeCameraComponent* pCamera = new FreeCameraComponent();
+    ThirdPersonCamera* pCamera = new ThirdPersonCamera();
     m_pCamera = pCamera;
     pEntity->AddComponent( pCamera );
     pCamera->SetClearColor( ColorF::BLACK );
@@ -349,7 +355,8 @@ void GameProcess::VOnInit(void)
     m_pSteering = new SteeringComponent();
     pEntity->AddComponent( m_pSteering );
     m_pSteering->SetSpeed( 15.0f );
-//    m_pSteering->Start();
+	m_pSteering->SetHeightOffset( 1.0f );
+    m_pSteering->Start();
     m_pSteering->Release();
     
     m_pMrBitey = pEntity;
@@ -363,7 +370,7 @@ void GameProcess::VOnInit(void)
 
 void GameProcess::VOnUpdate( const float fDeltaSeconds )
 {
-    const Matrix& matTransform = m_pMrBitey->GetTransform();
+    const Transform& matTransform = m_pMrBitey->GetTransform();
     Vector4 vPosition = matTransform.GetPosition();
     Vector4 vForward = matTransform.GetDirection().Normalize();
     Vector4 vCameraPosition = vPosition - vForward * 10.0f + Vector4( 0.0f, 5.0f, 0.0f );
@@ -385,6 +392,32 @@ void GameProcess::VOnUpdate( const float fDeltaSeconds )
     }
     
     ((StructuredMaterial<Vector4>*)m_pHeightMapEntity->GetMaterial())->GetData() = m_pAtmosphere->GetAtmosphericSettings().v3LightPos;
+
+	m_pCamera->SetTarget( m_pMrBitey->GetTransform().GetPosition() );
+
+	Vector4 vAngles;
+	if ( InputManager::Get()->GetKeyState( KEY_D ) != NONE_KEYSTATE )
+	{
+		vAngles.y -= 1.0f;
+	}
+
+	if ( InputManager::Get()->GetKeyState( KEY_A ) != NONE_KEYSTATE )
+	{
+		vAngles.y += 1.0f;
+	}
+
+	if ( InputManager::Get()->GetKeyState( KEY_W ) != NONE_KEYSTATE )
+	{
+		vAngles.x += 1.0f;
+	}
+
+	if ( InputManager::Get()->GetKeyState( KEY_S ) != NONE_KEYSTATE )
+	{
+		vAngles.x -= 1.0f;
+	}
+
+	m_pCamera->SetAngleDelta( vAngles * fDeltaSeconds );
+	m_pCamera->SetDistanceDelta(- InputManager::Get()->GetMouseWheelDelta().y );
 }
 
 void GameProcess::VOnSuccess(void)
@@ -428,10 +461,17 @@ bool GameProcess::VOnMouseButtonUp( const int iButtonIndex, const Vector3& vPosi
             if ( fDistance < 0.0f )
                 fDistance = -fDistance;
             
-            Matrix matTransform = m_pMrBitey->GetTransform();
-            matTransform.SetPosition( vRayPos + vRayDir * fDistance + Vector3   ::UP );
-            m_pMrBitey->SetTransform( matTransform );
-//            m_pSteering->SetTargetPosition( vRayPos + vRayDir * fDistance + Vector4( 0.0f, 0.0f, 0.0f ) );
+            Transform& transform = m_pMrBitey->GetTransform();
+
+			if ( InputManager::Get()->GetKeyState( KEY_T ) == HELD_KEYSTATE )
+			{
+				transform.SetPosition( vRayPos + vRayDir * fDistance + Vector3::UP );
+			}
+			else
+			{
+				Vector4 vTarget = vRayPos + vRayDir * fDistance + Vector3( 0.0f, 1.0f, 0.0f );
+				m_pSteering->SetTargetPosition( vTarget );
+			}            
             
             return false;
         }
@@ -447,11 +487,17 @@ bool GameProcess::VOnMouseButtonUp( const int iButtonIndex, const Vector3& vPosi
             {
                 if ( pEntity != m_pHeightMapEntity->GetOwner() )
                 {
-                    Matrix matTransform = m_pMrBitey->GetTransform();
-                    matTransform.SetPosition( pEntity->GetTransform().GetPosition() - Vector4( Vector4( 0.0f, 0.0f, -20.0f ) ) );
-                    m_pHeightMapEntity->GetHeight( matTransform.m[3][0], matTransform.m[3][2], matTransform.m[3][1] );
-                    m_pMrBitey->SetTransform( matTransform );
-                    
+                    Transform& matTransform = m_pMrBitey->GetTransform();
+					Vector4 vPosition( pEntity->GetTransform().GetPosition() - Vector4( Vector4( 0.0f, 0.0f, -20.0f ) ) );                    
+                    m_pHeightMapEntity->GetHeight( vPosition.x, vPosition.z, vPosition.y );
+                    matTransform.SetPosition( vPosition );
+
+					InteractableComponent* pInteractable = (InteractableComponent*)pEntity->GetComponent( InteractableComponent::g_hID );
+					if ( pInteractable )
+					{
+						pInteractable->VOnInteract( m_pMrBitey );
+					}
+
                     Combat::InitiateCombat( m_pCamera, m_pMrBitey, pEntity );
                 }
                 
@@ -470,6 +516,11 @@ bool GameProcess::VOnMouseButtonUp( const int iButtonIndex, const Vector3& vPosi
                     pMesh->Release();
                     pMeshComponent->Start();
                     pMeshComponent->Release();
+
+					TalkerComponent* pTalker = new TalkerComponent( "Dialogue.xml" );
+					pEntity->AddComponent( pTalker );
+					pTalker->Start();
+					pTalker->Release();
                     
                     StateMachineComponent* pStateMachine = new StateMachineComponent();
                     pEntity->AddComponent( pStateMachine );

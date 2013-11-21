@@ -12,7 +12,6 @@
 *.la
 *.a
 
-
 obj/
 ipch/
 [Dd]ebug/
@@ -23,3 +22,7 @@ ipch/
 *.filters
 *.user
 *.suo
+*.pdb
+*.ilk
+*.exp
+*.opensdf

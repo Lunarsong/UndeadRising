@@ -30,11 +30,15 @@ namespace Engine
         
         void SetSpeed( float fSpeed );
         float GetSpeed() const;
+
+		void SetHeightOffset( float fHeightOffset );
+		float GetHeightOffset() const;
         
     private:
         float   m_fSpeed;
         float   m_fHeightOffset;
         
+		bool m_bSteering;
         Vector4 m_vTargetPosition;
         float   m_fDistanceTarget;
     };

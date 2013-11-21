@@ -15,6 +15,7 @@ namespace Engine
     
     SteeringComponent::SteeringComponent()
     {
+		m_bSteering = false;
         m_fSpeed = 4.5f;
         m_fDistanceTarget = 1.0f;
         m_fHeightOffset = 0.0f;
@@ -32,6 +33,7 @@ namespace Engine
     
     void SteeringComponent::SetTargetPosition( const Vector4& vPosition )
     {
+		m_bSteering = true;
         m_vTargetPosition = vPosition;
     }
     
@@ -47,8 +49,11 @@ namespace Engine
     
     void SteeringComponent::VUpdate( float fDeltaSeconds )
     {
-        Matrix matTransform = GetTransform();
-        Vector4 vPosition = matTransform.GetPosition();
+		if ( !m_bSteering )
+			return;
+
+        Transform& transform = GetTransform();
+        Vector4 vPosition = transform.GetPosition();
         
         if ( vPosition.DistanceSQ( m_vTargetPosition ) > ( m_fDistanceTarget * m_fDistanceTarget ) )
         {
@@ -62,10 +67,13 @@ namespace Engine
                 vNewPosition.y = fHeight + m_fHeightOffset;
             }
             
-            matTransform.SetPosition( vNewPosition );
-            
-            SetTransform( matTransform );
+            transform.SetPosition( vNewPosition );
         }
+
+		else
+		{
+			m_bSteering = false;
+		}
     }
     
     void SteeringComponent::SetSpeed( float fSpeed )
@@ -77,4 +85,15 @@ namespace Engine
     {
         return m_fSpeed;
     }
+
+	void SteeringComponent::SetHeightOffset( float fHeightOffset )
+	{
+		m_fHeightOffset = fHeightOffset;
+	}
+
+	float SteeringComponent::GetHeightOffset() const
+	{
+		return m_fHeightOffset;
+	}
+
 }

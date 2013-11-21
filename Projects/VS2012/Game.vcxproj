@@ -95,10 +95,12 @@
     <ClCompile Include="..\..\Source\CombatAbility.cpp" />
     <ClCompile Include="..\..\Source\CombatProcess.cpp" />
     <ClCompile Include="..\..\Source\GameProcess.cpp" />
+    <ClCompile Include="..\..\Source\InteractableComponent.cpp" />
     <ClCompile Include="..\..\Source\IslandData.cpp" />
     <ClCompile Include="..\..\Source\Main.cpp" />
     <ClCompile Include="..\..\Source\StateMachineComponent.cpp" />
     <ClCompile Include="..\..\Source\SteeringComponent.cpp" />
+    <ClCompile Include="..\..\Source\TalkerComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\Character.h" />
@@ -107,10 +109,16 @@
     <ClInclude Include="..\..\Source\CombatAbility.h" />
     <ClInclude Include="..\..\Source\CombatProcess.h" />
     <ClInclude Include="..\..\Source\GameProcess.h" />
+    <ClInclude Include="..\..\Source\InteractableComponent.h" />
     <ClInclude Include="..\..\Source\IslandData.h" />
     <ClInclude Include="..\..\Source\Main.h" />
     <ClInclude Include="..\..\Source\StateMachineComponent.h" />
     <ClInclude Include="..\..\Source\SteeringComponent.h" />
+    <ClInclude Include="..\..\Source\TalkerComponent.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Game.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

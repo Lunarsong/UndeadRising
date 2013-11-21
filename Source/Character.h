@@ -19,6 +19,10 @@ public:
     Character();
     ~Character();
     
+	virtual const HashedString& GetType() const;
+
+	static const HashedString g_hID;
+
     const CharacterAttributes& GetAttributes() const;
     
 private:
