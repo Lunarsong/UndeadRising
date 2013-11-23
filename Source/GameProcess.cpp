@@ -15,6 +15,7 @@
 #include <Game/Dialogue/UI/DialogueInterface.h>
 #include "TalkerComponent.h"
 #include "CombatAbility.h"
+#include <Game/Entities/Components/Rendering/WaterPlane.h>
 
 GameProcess::GameProcess()
 {
@@ -356,6 +357,7 @@ void GameProcess::VOnInit(void)
     pMesh = Mesh::CreateBox();
     mat.BuildScale( Vector4::ONE * 2.0f );
     mat.SetPosition( Vector4( 1900.0f, 0.0f, 1900.0f ) );
+	mat.SetPosition( Vector4( 0.0f, 0.0f, 0.0f ) );
     pEntity = Game::CreateEntity( mat );
     pMeshComponent = new MeshComponent();
     pEntity->AddComponent( pMeshComponent );
@@ -376,7 +378,15 @@ void GameProcess::VOnInit(void)
     m_pAtmosphere = new AtmosphericScattering();
     pEntity->AddComponent( m_pAtmosphere );
     m_pAtmosphere->Start();
-    m_pAtmosphere->Release();
+	m_pAtmosphere->Release();
+
+	Transform waterPosition;
+	waterPosition.SetPosition( 0.0f, 5.0f, 0.0f );
+	pEntity = Game::CreateEntity( waterPosition );
+	WaterPlane* pWater = new WaterPlane();
+	pEntity->AddComponent( pWater );
+	pWater->Start();
+	pWater->Release();
 }
 
 void GameProcess::VOnUpdate( const float fDeltaSeconds )
@@ -387,7 +397,7 @@ void GameProcess::VOnUpdate( const float fDeltaSeconds )
     Vector4 vCameraPosition = vPosition - vForward * 10.0f + Vector4( 0.0f, 5.0f, 0.0f );
 //    m_pCamera->SetPosition( vCameraPosition );
 //    m_pCamera->SetDirection( vForward );
-    Vector3 vResolution( IRenderer::Get()->VGetScreenWidth(), IRenderer::Get()->VGetScreenHeight(), 1.0f );
+    Vector3 vResolution( (float)IRenderer::Get()->VGetScreenWidth(), (float)IRenderer::Get()->VGetScreenHeight(), 1.0f );
     
     Vector3 vRayPos, vRayDir;
     Matrix::Unproject( InputManager::Get()->GetMousePos(), vResolution, m_pCamera->GetProjection(), m_pCamera->GetView(), vRayPos, vRayDir );

@@ -88,6 +88,7 @@ void Start()
 	AssetManager::Get().AddAssetBundle( new FolderAssetBundle( FileUtils::GetWorkingFolder() + "Assets/" ) );
     
     AssetManager::Get().RegisterLoader( HashedString( "*.png" ), new ImageAssetLoader() );
+	AssetManager::Get().RegisterLoader( HashedString( "*.dds" ), new ImageAssetLoader() );
     AssetManager::Get().RegisterLoader( HashedString( "*.jpg" ), new ImageAssetLoader() );
     
     GameProcess* pGame = new GameProcess();
