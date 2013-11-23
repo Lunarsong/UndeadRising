@@ -14,6 +14,7 @@
 #include "Combat.h"
 #include <Game/Dialogue/UI/DialogueInterface.h>
 #include "TalkerComponent.h"
+#include "CombatAbility.h"
 
 GameProcess::GameProcess()
 {
@@ -29,6 +30,15 @@ GameProcess::~GameProcess()
 
 void GameProcess::VOnInit(void)
 {
+    XmlResource* pResource = AssetManager::Get().GetAsset<XmlResource>( "CombatAbilities.xml" );
+    if ( pResource )
+    {
+        CombatAbility ability;
+        ability.VFromXML( pResource->GetRoot()->FirstChildElement() );
+        int i = 0;
+        i += 5;
+    }
+    
 	DialogueInterface* pDialogue = new DialogueInterface( NULL, "DialogueInterface.xml", "Dialogue.xml" );
 	pDialogue->SetName( "Dialogue" );
 	BaseApplication::Get()->AttachProcess( pDialogue );
@@ -36,6 +46,7 @@ void GameProcess::VOnInit(void)
 
     Entity* pEntity = Game::CreateEntity();
     ThirdPersonCamera* pCamera = new ThirdPersonCamera();
+    pCamera->SetDistanceMax( 50.0f );
     m_pCamera = pCamera;
     pEntity->AddComponent( pCamera );
     pCamera->SetClearColor( ColorF::BLACK );

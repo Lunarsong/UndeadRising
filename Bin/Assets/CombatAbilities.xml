@@ -1,0 +1,6 @@
+<CombatAbilities>
+	<Ability Name="Draining Touch" Range="3" Target="Entity">
+		<CombatEffect Target="Other" Type="Dark" Min="12" Max="18" Radius="0"/>
+		<CombatEffect Target="Self" Type="Healing" Min="8" Max="14" Radius="0"/>
+	</Ability>
+</CombatAbilities>
