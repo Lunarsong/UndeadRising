@@ -31,15 +31,6 @@ GameProcess::~GameProcess()
 
 void GameProcess::VOnInit(void)
 {
-    XmlResource* pResource = AssetManager::Get().GetAsset<XmlResource>( "CombatAbilities.xml" );
-    if ( pResource )
-    {
-        CombatAbility ability;
-        ability.VFromXML( pResource->GetRoot()->FirstChildElement() );
-        int i = 0;
-        i += 5;
-    }
-    
 	DialogueInterface* pDialogue = new DialogueInterface( NULL, "DialogueInterface.xml", "Dialogue.xml" );
 	pDialogue->SetName( "Dialogue" );
 	BaseApplication::Get()->AttachProcess( pDialogue );
@@ -372,6 +363,24 @@ void GameProcess::VOnInit(void)
     m_pSteering->Start();
     m_pSteering->Release();
     
+    Character* pCharacter = new Character();
+    XmlResource* pResource = AssetManager::Get().GetAsset<XmlResource>( "CombatAbilities.xml" );
+    if ( pResource )
+    {
+        auto pElement = pResource->GetRoot()->FirstChildElement();
+        
+        while ( pElement )
+        {
+            CombatAbility ability;
+            ability.VFromXML( pElement );
+            pCharacter->AddAbility( ability );
+            
+            pElement = pElement->NextSiblingElement( "Ability" );
+        }
+    }
+    
+    pEntity->AddComponent( pCharacter );
+    pCharacter->Release();
     m_pMrBitey = pEntity;
     
     pEntity = Game::CreateEntity();
@@ -548,6 +557,24 @@ bool GameProcess::VOnMouseButtonUp( const int iButtonIndex, const Vector3& vPosi
                     //pStateMachine->Start();
                     pStateMachine->Release();
                     
+                    Character* pCharacter = new Character();
+                    XmlResource* pResource = AssetManager::Get().GetAsset<XmlResource>( "CombatAbilities.xml" );
+                    if ( pResource )
+                    {
+                        auto pElement = pResource->GetRoot()->FirstChildElement();
+                        
+                        while ( pElement )
+                        {
+                            CombatAbility ability;
+                            ability.VFromXML( pElement );
+                            pCharacter->AddAbility( ability );
+                            
+                            pElement = pElement->NextSiblingElement( "Ability" );
+                        }
+                    }
+                    
+                    pEntity->AddComponent( pCharacter );
+                    pCharacter->Release();
                     
                     /*ParticleEmitter* pSystem = new ParticleEmitter();
                     pEntity->AddComponent( pSystem );

@@ -34,4 +34,7 @@ private:
     UIElement* m_pCombatScreen;
 
 	void OnCombatButton( UIElement* pElement, void* pArgs );
+    
+    Vector3 m_vHPSize;
+    Vector3 m_vEnemyHPSize;
 };

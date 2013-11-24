@@ -17,4 +17,7 @@ class Combat
 {
 public:
     static void InitiateCombat( Camera* pCamera, Entity* pEntity0, Entity* pEntity1 );
+    
+    static void ProcessAbility( const CombatAbility& ability, Entity* pUser, Entity* pTarget );
+    static void ResolveEffect( const CombatEffect& effect, Entity* pUser, Entity* pTarget );
 };

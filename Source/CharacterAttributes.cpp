@@ -13,7 +13,7 @@ CharacterAttributes::CharacterAttributes()
 {
     for ( int i = 0; i < AttributeCount; ++i )
     {
-        m_Attributes[ i ] = 10;
+        m_Attributes[ i ] = 100;
     }
 }
 

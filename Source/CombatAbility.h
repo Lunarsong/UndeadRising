@@ -64,6 +64,8 @@ public:
     CombatAbility();
     ~CombatAbility();
     
+    const HashedString& GetName() const;
+    
     int GetNumEffects() const;
     const CombatEffect& GetEffect( unsigned int uiIndex ) const;
     void AddEffect( const CombatEffect& effect );

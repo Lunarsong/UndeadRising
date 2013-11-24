@@ -12,10 +12,29 @@
 #include <Game/Entities/Components/Rendering/Particles/Processors/SpawnPositionProcessors.h>
 #include <Game/Entities/Components/Rendering/Particles/Processors/SimulationProcessors.h>
 #include <Game/Entities/Components/DurationComponent.h>
+#include "Combat.h"
 
 void CombatProcess::OnCombatButton( UIElement* pElement, void* pArgs )
 {
-	const Transform& transform = m_pEntity0->GetTransform();
+	Character* pCharacter = (Character*)m_pEntity0->GetComponent( "Character" );
+    if ( pCharacter )
+    {
+        unsigned int uiSize = pCharacter->GetNumAbilities();
+        if ( (unsigned int)pArgs < uiSize )
+        {
+            const CombatAbility& ability = pCharacter->GetAbility( (unsigned int)pArgs );
+            Combat::ProcessAbility( ability, m_pEntity0, m_pEntity1 );
+        }
+        
+        else
+        {
+            throw "Ability button pressed without ability";
+        }
+    }
+    
+    return;
+    
+    const Transform& transform = m_pEntity0->GetTransform();
 
 	Entity* pEntity = Game::CreateEntity( transform );
 	ParticleEmitter* pSystem = new ParticleEmitter();
@@ -104,21 +123,68 @@ void CombatProcess::VOnInit(void)
     m_pCombatScreen = UserInterface::AddScreenFromFile( "Combat", "CombatScreen.xml" );
     assert( m_pCombatScreen );
     
-	((UIButton*)m_pCombatScreen->GetElement( "btn_action_bottomright" ))->SetCallbackArgs( 0 );
-	((UIButton*)m_pCombatScreen->GetElement( "btn_action_bottomright" ))->SetCallbackFunction( std::bind( &CombatProcess::OnCombatButton, this, std::placeholders::_1, std::placeholders::_2 ) );
+	((UIButtonImage*)m_pCombatScreen->GetElement( "btn_action_bottomright" ))->SetCallbackArgs( 0 );
+	((UIButtonImage*)m_pCombatScreen->GetElement( "btn_action_bottomright" ))->SetCallbackFunction( std::bind( &CombatProcess::OnCombatButton, this, std::placeholders::_1, std::placeholders::_2 ) );
 
-	((UIButton*)m_pCombatScreen->GetElement( "btn_action_bottomleft" ))->SetCallbackArgs( (void*)1 );
-	((UIButton*)m_pCombatScreen->GetElement( "btn_action_bottomleft" ))->SetCallbackFunction( std::bind( &CombatProcess::OnCombatButton, this, std::placeholders::_1, std::placeholders::_2 ) );
+	((UIButtonImage*)m_pCombatScreen->GetElement( "btn_action_bottomleft" ))->SetCallbackArgs( (void*)1 );
+	((UIButtonImage*)m_pCombatScreen->GetElement( "btn_action_bottomleft" ))->SetCallbackFunction( std::bind( &CombatProcess::OnCombatButton, this, std::placeholders::_1, std::placeholders::_2 ) );
 
-	((UIButton*)m_pCombatScreen->GetElement( "btn_action_topright" ))->SetCallbackArgs( (void*)2 );
-	((UIButton*)m_pCombatScreen->GetElement( "btn_action_topright" ))->SetCallbackFunction( std::bind( &CombatProcess::OnCombatButton, this, std::placeholders::_1, std::placeholders::_2 ) );
+	((UIButtonImage*)m_pCombatScreen->GetElement( "btn_action_topright" ))->SetCallbackArgs( (void*)2 );
+	((UIButtonImage*)m_pCombatScreen->GetElement( "btn_action_topright" ))->SetCallbackFunction( std::bind( &CombatProcess::OnCombatButton, this, std::placeholders::_1, std::placeholders::_2 ) );
 
-	((UIButton*)m_pCombatScreen->GetElement( "btn_action_topleft" ))->SetCallbackArgs( (void*)3 );
-	((UIButton*)m_pCombatScreen->GetElement( "btn_action_topleft" ))->SetCallbackFunction( std::bind( &CombatProcess::OnCombatButton, this, std::placeholders::_1, std::placeholders::_2 ) );
+	((UIButtonImage*)m_pCombatScreen->GetElement( "btn_action_topleft" ))->SetCallbackArgs( (void*)3 );
+	((UIButtonImage*)m_pCombatScreen->GetElement( "btn_action_topleft" ))->SetCallbackFunction( std::bind( &CombatProcess::OnCombatButton, this, std::placeholders::_1, std::placeholders::_2 ) );
     
+    
+    Character* pCharacter = (Character*)m_pEntity0->GetComponent( "Character" );
+    if ( pCharacter )
+    {
+        UILabel* pLabels[4];
+        pLabels[0] = ((UILabel*)m_pCombatScreen->GetElement( "lbl_ability_br" ));
+        pLabels[1] = ((UILabel*)m_pCombatScreen->GetElement( "lbl_ability_bl" ));
+        pLabels[2] = ((UILabel*)m_pCombatScreen->GetElement( "lbl_ability_tr" ));
+        pLabels[3] = ((UILabel*)m_pCombatScreen->GetElement( "lbl_ability_tl" ));
+        
+        unsigned int uiSize = pCharacter->GetNumAbilities();
+        for ( unsigned int i = 0; i < 4; ++i )
+        {
+            if ( i >= uiSize )
+                break;
+            
+            const CombatAbility& ability = pCharacter->GetAbility( i );
+            pLabels[i]->SetString( ability.GetName().getStr() );
+        }
+    }
+    
+
+    UIColor* pHP = (UIColor*)m_pCombatScreen->GetElement( "player_hitpoints" );
+    if ( pHP )
+    {
+        m_vHPSize = pHP->GetSize().GetCoordinates();
+    }
+    
+    UIColor* pEnemyHP = (UIColor*)m_pCombatScreen->GetElement( "enemy_hitpoints" );
+    if ( pEnemyHP )
+    {
+        m_vEnemyHPSize = pEnemyHP->GetSize().GetCoordinates();
+    }
 }
 
 void CombatProcess::VOnUpdate( const float fDeltaSeconds )
 {
+    Character* pCharacter = (Character*)m_pEntity0->GetComponent( "Character" );
+    UIColor* pHP = (UIColor*)m_pCombatScreen->GetElement( "player_hitpoints" );
+    if ( pHP && pCharacter )
+    {
+        float fSizePercent = (float)pCharacter->GetHitPoints() / (float)pCharacter->GetAttributes().GetAttribute( CharacterAttributes::HitPoints );
+        pHP->SetSize( m_vHPSize.x * fSizePercent, m_vHPSize.y );
+    }
     
+    Character* pEnemyCharacter = (Character*)m_pEntity1->GetComponent( "Character" );
+    UIColor* pEnemyHP = (UIColor*)m_pCombatScreen->GetElement( "enemy_hitpoints" );
+    if ( pEnemyHP && pEnemyCharacter )
+    {
+        float fSizePercent = (float)pEnemyCharacter->GetHitPoints() / (float)pEnemyCharacter->GetAttributes().GetAttribute( CharacterAttributes::HitPoints );
+        pEnemyHP->SetSize( m_vEnemyHPSize.x * fSizePercent, m_vEnemyHPSize.y );
+    }
 }

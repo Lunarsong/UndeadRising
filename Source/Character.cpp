@@ -31,3 +31,37 @@ const HashedString& Character::GetType() const
 	return g_hID;
 }
 
+void Character::AddAbility( const CombatAbility& ability )
+{
+    m_Abilities.push_back( ability );
+}
+
+const CombatAbility& Character::GetAbility( unsigned int uiIndex ) const
+{
+    assert( uiIndex < m_Abilities.size() && "Index larger than container!" );
+    return m_Abilities[ uiIndex ];
+}
+
+unsigned int Character::GetNumAbilities() const
+{
+    return m_Abilities.size();
+}
+
+int Character::OnDamage( int iDamage, CombatEffect::Type eType )
+{
+    switch ( eType )
+    {
+        case CombatEffect::Healing:
+            m_iHitPoints += iDamage;
+            break;
+            
+        default:
+            m_iHitPoints -= iDamage;
+            break;
+    }
+    
+    m_iHitPoints = std::min( m_iHitPoints, m_Attributes.GetAttribute( CharacterAttributes::HitPoints ) );
+    m_iHitPoints = std::max( m_iHitPoints, 0 );
+    
+    return iDamage;
+}

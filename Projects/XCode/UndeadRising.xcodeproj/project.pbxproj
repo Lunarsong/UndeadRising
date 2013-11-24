@@ -23,6 +23,10 @@
 		E60E525E18040AF300181A26 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E525D18040AF300181A26 /* libz.dylib */; };
 		E60E526018040AFB00181A26 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E525F18040AFB00181A26 /* Cocoa.framework */; };
 		E60E526218040B0400181A26 /* libangelscript.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E526118040B0400181A26 /* libangelscript.a */; };
+		E650D5F7184169C6008B2A5F /* wave0.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E650D5F5184169C6008B2A5F /* wave0.png */; };
+		E650D5F8184169C6008B2A5F /* wave1.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E650D5F6184169C6008B2A5F /* wave1.png */; };
+		E650D5FB184169E3008B2A5F /* wave0.png in Resources */ = {isa = PBXBuildFile; fileRef = E650D5F5184169C6008B2A5F /* wave0.png */; };
+		E650D5FC184169E3008B2A5F /* wave1.png in Resources */ = {isa = PBXBuildFile; fileRef = E650D5F6184169C6008B2A5F /* wave1.png */; };
 		E65BD8561835983300A51612 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E65BD8551835983300A51612 /* OpenGLES.framework */; };
 		E65BD85A1835984800A51612 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E65BD8591835984800A51612 /* libz.dylib */; };
 		E65BD85C1835985000A51612 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E65BD85B1835985000A51612 /* QuartzCore.framework */; };
@@ -156,6 +160,8 @@
 				E680ED66183DDFAA0091DDEB /* CombatScreen.xml in CopyFiles */,
 				E680ED67183DDFAA0091DDEB /* Consolas.ttf in CopyFiles */,
 				E680ED68183DDFAA0091DDEB /* Desert.png in CopyFiles */,
+				E650D5F7184169C6008B2A5F /* wave0.png in CopyFiles */,
+				E650D5F8184169C6008B2A5F /* wave1.png in CopyFiles */,
 				E680ED69183DDFAA0091DDEB /* dialogue.png in CopyFiles */,
 				E680ED6A183DDFAA0091DDEB /* Dialogue.xml in CopyFiles */,
 				E680ED6B183DDFAA0091DDEB /* DialogueInterface.xml in CopyFiles */,
@@ -195,6 +201,8 @@
 		E60E525D18040AF300181A26 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
 		E60E525F18040AFB00181A26 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		E60E526118040B0400181A26 /* libangelscript.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libangelscript.a; path = ../../../LunaEngine/Engine/Externals/AngelScript/iOS/OSX/libangelscript.a; sourceTree = "<group>"; };
+		E650D5F5184169C6008B2A5F /* wave0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wave0.png; sourceTree = "<group>"; };
+		E650D5F6184169C6008B2A5F /* wave1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wave1.png; sourceTree = "<group>"; };
 		E65BD8531835981E00A51612 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		E65BD8551835983300A51612 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		E65BD8591835984800A51612 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -402,6 +410,8 @@
 		E67B8367180990B600BA2394 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				E650D5F5184169C6008B2A5F /* wave0.png */,
+				E650D5F6184169C6008B2A5F /* wave1.png */,
 				E6CABFD818408F5600AF1B28 /* CombatAbilities.xml */,
 				E680ED4C183DDFA90091DDEB /* Arial.ttf */,
 				E680ED4D183DDFA90091DDEB /* Avatar0.png */,
@@ -593,6 +603,7 @@
 				E680ED8C183DE0BE0091DDEB /* Water.png in Resources */,
 				E680ED88183DE0BE0091DDEB /* sketch.png in Resources */,
 				E680ED89183DE0BE0091DDEB /* Snow.png in Resources */,
+				E650D5FC184169E3008B2A5F /* wave1.png in Resources */,
 				E680ED7B183DE0BE0091DDEB /* Arial.ttf in Resources */,
 				E680ED83183DE0BE0091DDEB /* Dirt.png in Resources */,
 				E680ED7D183DE0BE0091DDEB /* CombatScreen.xml in Resources */,
@@ -602,6 +613,7 @@
 				E6CABFDC18408F5F00AF1B28 /* CombatAbilities.xml in Resources */,
 				E680ED7C183DE0BE0091DDEB /* Avatar0.png in Resources */,
 				E680ED82183DE0BE0091DDEB /* DialogueInterface.xml in Resources */,
+				E650D5FB184169E3008B2A5F /* wave0.png in Resources */,
 				E680ED7F183DE0BE0091DDEB /* Desert.png in Resources */,
 				E680ED81183DE0BE0091DDEB /* Dialogue.xml in Resources */,
 				E60E51C51804069C00181A26 /* InfoPlist.strings in Resources */,

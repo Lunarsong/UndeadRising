@@ -6,68 +6,118 @@
 		<Position x="0" y="0" />
 		<Size x="1.0" y="1.0" />
         
-        <!-- Health Bar -->
-        <Color>
-            <Position x="10" y="10" />
-            <Size x="200.0" y="22.0" />
-            <Color r="50" b="50" g="50" />
-            
+        <!-- Enemy Hud -->
+        <UI>
+            <RelPosition x="0.5" y="0.0" />
+
+            <!-- Health Bar -->
             <Color>
-                <Position x="4" y="4" />
-                <Size x="192.0" y="14.0" />
-                <Color r="255" b="0" g="0" />
+                <Position x="10" y="10" />
+                <Size x="200.0" y="22.0" />
+                <Color r="50" b="50" g="50" />
+                <Alignment>Center</Alignment>
+                
+                <Color>
+                    <ID>enemy_hitpoints</ID>
+                    <Position x="4" y="4" />
+                    <Size x="192.0" y="14.0" />
+                    <Color r="255" b="0" g="0" />
+                </Color>
             </Color>
-        </Color>
+        </UI>
         
-        <!-- Mana Bar -->
-        <Color>
-            <Position x="10" y="40" />
-            <Size x="200.0" y="22.0" />
-            <Color r="50" b="50" g="50" />
-            
+        <!-- Player HUD -->
+        <UI>
+            <!-- Health Bar -->
             <Color>
-                <Position x="4" y="4" />
-                <Size x="192.0" y="14.0" />
-                <Color r="0" b="255" g="0" />
+                <Position x="10" y="10" />
+                <Size x="200.0" y="22.0" />
+                <Color r="50" b="50" g="50" />
+                
+                <Color>
+                    <ID>player_hitpoints</ID>
+                    <Position x="4" y="4" />
+                    <Size x="192.0" y="14.0" />
+                    <Color r="255" b="0" g="0" />
+                </Color>
             </Color>
-        </Color>
+            
+            <!-- Mana Bar -->
+            <Color>
+                <Position x="10" y="40" />
+                <Size x="200.0" y="22.0" />
+                <Color r="50" b="50" g="50" />
+                
+                <Color>
+                    <Position x="4" y="4" />
+                    <Size x="192.0" y="14.0" />
+                    <Color r="0" b="255" g="0" />
+                </Color>
+            </Color>
+        </UI>
 		
         <!-- Action Buttons -->
         <UI>
             <RelPosition x="1.0" y="1.0" />
-            <Button>
+            <ButtonImage>
 				<ID>btn_action_bottomright</ID>
                 <Position x="-10" y="-10" />
                 <Color r="50" b="50" g="50" />
                 <Size x="60" y="60.0" />
                 <Alignment>BottomRight</Alignment>
-            </Button>
+                
+                <Label>
+                     <Alignment>Center</Alignment>
+                     <Position x="30" y="30"/>
+                     <ID>lbl_ability_br</ID>
+                     <Font Name="Arial" Size="20"/>
+                 </Label>
+            </ButtonImage>
             
-            <Button>
+            <ButtonImage>
 				<ID>btn_action_bottomleft</ID>
                 <Position x="-80" y="-10" />
                 <Color r="50" b="50" g="50" />
                 <Size x="60" y="60.0" />
                 <Alignment>BottomRight</Alignment>
-            </Button>
+                
+                <Label>
+                    <Alignment>Center</Alignment>
+                    <Position x="30" y="30"/>
+                    <ID>lbl_ability_bl</ID>
+                    <Font Name="Arial" Size="20"/>
+                </Label>
+            </ButtonImage>
             
-            <Button>
+            <ButtonImage>
 				<ID>btn_action_topright</ID>
                 <Position x="-10" y="-80" />
                 <Color r="50" b="50" g="50" />
                 <Size x="60" y="60.0" />
                 <Alignment>BottomRight</Alignment>
-            </Button>
+                
+                <Label>
+                    <Alignment>Center</Alignment>
+                    <Position x="30" y="30"/>
+                    <ID>lbl_ability_tr</ID>
+                    <Font Name="Arial" Size="20"/>
+                </Label>
+            </ButtonImage>
             
-            <Button>
+            <ButtonImage>
 				<ID>btn_action_topleft</ID>
                 <Position x="-80" y="-80" />
                 <Color r="50" b="50" g="50" />
                 <Size x="60" y="60.0" />
                 <Alignment>BottomRight</Alignment>
-            </Button>
+                
+                <Label>
+                    <Alignment>Center</Alignment>
+                    <Position x="30" y="30"/>
+                    <ID>lbl_ability_tl</ID>
+                    <Font Name="Arial" Size="20"/>
+                </Label>
+            </ButtonImage>
         </UI>
-        
-		
 	</UI>
 </Monitor>

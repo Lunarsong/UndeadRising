@@ -24,6 +24,11 @@ int CombatAbility::GetNumEffects() const
     return m_Effects.size();
 }
 
+const HashedString& CombatAbility::GetName() const
+{
+    return m_Name;
+}
+
 const CombatEffect& CombatAbility::GetEffect( unsigned int uiIndex ) const
 {
     assert( "Requested index larger than container!" && uiIndex < m_Effects.size() );
