@@ -35,6 +35,8 @@ public:
     
     int GetHitPoints() const { return m_iHitPoints; }
     
+    virtual void VOnMessage( const HashedString& hMessage, const void* pData );
+    
 private:
     int m_iHitPoints;
     int m_iMana;

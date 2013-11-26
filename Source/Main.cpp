@@ -14,7 +14,7 @@
 #include <Game/Entities/Components/Rendering/QuadComponent.h>
 #include <Core/AssetManager/FolderAssetBundle.h>
 #include <Core/AssetManager/Loaders/ImageAssetLoader.h>
-
+#include <Core/Utils/FileUtils.h>
 #include <Core/Network/TCPSocket.h>
 #include <Core/Network/SocketManager.h>
 

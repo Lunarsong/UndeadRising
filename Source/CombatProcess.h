@@ -13,6 +13,7 @@
 #include <Game/Entities/Entity.h>
 #include <UI/UserInterface.h>
 #include "Character.h"
+#include "Combat.h"
 
 using namespace Engine;
 
@@ -30,11 +31,8 @@ private:
 
     SmartPtr<Entity>    m_pEntity0;
     SmartPtr<Entity>    m_pEntity1;
-    
-    UIElement* m_pCombatScreen;
 
-	void OnCombatButton( UIElement* pElement, void* pArgs );
+    Combat::CombatStartData m_CombatData;
     
-    Vector3 m_vHPSize;
-    Vector3 m_vEnemyHPSize;
+    void OnVictory( Entity* pVictor, Entity* pLoser );
 };

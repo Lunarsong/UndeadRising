@@ -7,6 +7,8 @@
 //
 
 #include "Character.h"
+#include "Combat.h"
+#include <Game/Game.h>
 
 const HashedString Character::g_hID( "Character" );
 
@@ -64,4 +66,15 @@ int Character::OnDamage( int iDamage, CombatEffect::Type eType )
     m_iHitPoints = std::max( m_iHitPoints, 0 );
     
     return iDamage;
+}
+
+void Character::VOnMessage( const HashedString &hMessage, const void *pData )
+{
+    if ( hMessage == Combat::hMessageCombatLost )
+    {
+        if ( m_pOwner->GetComponent( "GameHUD" ) == NULL )
+        {
+            Game::DestroyEntity( m_pOwner );
+        }
+    }
 }

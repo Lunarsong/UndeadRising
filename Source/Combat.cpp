@@ -56,3 +56,8 @@ void Combat::ResolveEffect( const CombatEffect& effect, Entity* pUser, Entity* p
             break;
     }
 }
+
+const HashedString Combat::hMessageCombatStart( "CombatStart" );
+const HashedString Combat::hMessageCombatOver( "CombatOver" );
+const HashedString Combat::hMessageCombatWon( "CombatWon" );
+const HashedString Combat::hMessageCombatLost( "CombatLost" );

@@ -41,7 +41,7 @@
 		E680ED2C183DDD600091DDEB /* TalkerComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E680ED27183DDD600091DDEB /* TalkerComponent.cpp */; };
 		E680ED64183DDFAA0091DDEB /* Arial.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E680ED4C183DDFA90091DDEB /* Arial.ttf */; };
 		E680ED65183DDFAA0091DDEB /* Avatar0.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E680ED4D183DDFA90091DDEB /* Avatar0.png */; };
-		E680ED66183DDFAA0091DDEB /* CombatScreen.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E680ED4E183DDFA90091DDEB /* CombatScreen.xml */; };
+		E680ED66183DDFAA0091DDEB /* GameHUD.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E680ED4E183DDFA90091DDEB /* GameHUD.xml */; };
 		E680ED67183DDFAA0091DDEB /* Consolas.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = E680ED4F183DDFA90091DDEB /* Consolas.ttf */; };
 		E680ED68183DDFAA0091DDEB /* Desert.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E680ED50183DDFA90091DDEB /* Desert.png */; };
 		E680ED69183DDFAA0091DDEB /* dialogue.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E680ED51183DDFA90091DDEB /* dialogue.png */; };
@@ -59,7 +59,7 @@
 		E680ED7A183DDFAA0091DDEB /* Water.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = E680ED62183DDFAA0091DDEB /* Water.png */; };
 		E680ED7B183DE0BE0091DDEB /* Arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E680ED4C183DDFA90091DDEB /* Arial.ttf */; };
 		E680ED7C183DE0BE0091DDEB /* Avatar0.png in Resources */ = {isa = PBXBuildFile; fileRef = E680ED4D183DDFA90091DDEB /* Avatar0.png */; };
-		E680ED7D183DE0BE0091DDEB /* CombatScreen.xml in Resources */ = {isa = PBXBuildFile; fileRef = E680ED4E183DDFA90091DDEB /* CombatScreen.xml */; };
+		E680ED7D183DE0BE0091DDEB /* GameHUD.xml in Resources */ = {isa = PBXBuildFile; fileRef = E680ED4E183DDFA90091DDEB /* GameHUD.xml */; };
 		E680ED7E183DE0BE0091DDEB /* Consolas.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E680ED4F183DDFA90091DDEB /* Consolas.ttf */; };
 		E680ED7F183DE0BE0091DDEB /* Desert.png in Resources */ = {isa = PBXBuildFile; fileRef = E680ED50183DDFA90091DDEB /* Desert.png */; };
 		E680ED80183DE0BE0091DDEB /* dialogue.png in Resources */ = {isa = PBXBuildFile; fileRef = E680ED51183DDFA90091DDEB /* dialogue.png */; };
@@ -81,6 +81,7 @@
 		E68E1F931821B0E900D0F5E7 /* StateMachineComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E68E1F901821B0E900D0F5E7 /* StateMachineComponent.cpp */; };
 		E68E1F961821B32E00D0F5E7 /* SteeringComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E68E1F941821B32E00D0F5E7 /* SteeringComponent.cpp */; };
 		E68E1F971821B32E00D0F5E7 /* SteeringComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E68E1F941821B32E00D0F5E7 /* SteeringComponent.cpp */; };
+		E6914F1918441FD100D08351 /* Particle.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6914F1818441FD100D08351 /* Particle.xml */; };
 		E69A6E1318317FAF00D035AE /* CombatProcess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E69A6E1118317FAF00D035AE /* CombatProcess.cpp */; };
 		E69A6E1418317FAF00D035AE /* CombatProcess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E69A6E1118317FAF00D035AE /* CombatProcess.cpp */; };
 		E69A6E17183183F700D035AE /* CharacterAttributes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E69A6E15183183F700D035AE /* CharacterAttributes.cpp */; };
@@ -91,6 +92,8 @@
 		E69A6E201832042800D035AE /* CombatAbility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E69A6E1D1832042800D035AE /* CombatAbility.cpp */; };
 		E69A6E231832076900D035AE /* Combat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E69A6E211832076900D035AE /* Combat.cpp */; };
 		E69A6E241832076900D035AE /* Combat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E69A6E211832076900D035AE /* Combat.cpp */; };
+		E6BF54291843A1D100253504 /* GameHUDComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6BF54271843A1D100253504 /* GameHUDComponent.cpp */; };
+		E6BF542C1843A4AC00253504 /* GameHUDComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6BF54271843A1D100253504 /* GameHUDComponent.cpp */; };
 		E6CABFD918408F5600AF1B28 /* CombatAbilities.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6CABFD818408F5600AF1B28 /* CombatAbilities.xml */; };
 		E6CABFDC18408F5F00AF1B28 /* CombatAbilities.xml in Resources */ = {isa = PBXBuildFile; fileRef = E6CABFD818408F5600AF1B28 /* CombatAbilities.xml */; };
 /* End PBXBuildFile section */
@@ -157,9 +160,10 @@
 				E680ED64183DDFAA0091DDEB /* Arial.ttf in CopyFiles */,
 				E680ED65183DDFAA0091DDEB /* Avatar0.png in CopyFiles */,
 				E6CABFD918408F5600AF1B28 /* CombatAbilities.xml in CopyFiles */,
-				E680ED66183DDFAA0091DDEB /* CombatScreen.xml in CopyFiles */,
+				E680ED66183DDFAA0091DDEB /* GameHUD.xml in CopyFiles */,
 				E680ED67183DDFAA0091DDEB /* Consolas.ttf in CopyFiles */,
 				E680ED68183DDFAA0091DDEB /* Desert.png in CopyFiles */,
+				E6914F1918441FD100D08351 /* Particle.xml in CopyFiles */,
 				E650D5F7184169C6008B2A5F /* wave0.png in CopyFiles */,
 				E650D5F8184169C6008B2A5F /* wave1.png in CopyFiles */,
 				E680ED69183DDFAA0091DDEB /* dialogue.png in CopyFiles */,
@@ -217,7 +221,7 @@
 		E680ED28183DDD600091DDEB /* TalkerComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkerComponent.h; sourceTree = "<group>"; };
 		E680ED4C183DDFA90091DDEB /* Arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Arial.ttf; sourceTree = "<group>"; };
 		E680ED4D183DDFA90091DDEB /* Avatar0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Avatar0.png; sourceTree = "<group>"; };
-		E680ED4E183DDFA90091DDEB /* CombatScreen.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CombatScreen.xml; sourceTree = "<group>"; };
+		E680ED4E183DDFA90091DDEB /* GameHUD.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GameHUD.xml; sourceTree = "<group>"; };
 		E680ED4F183DDFA90091DDEB /* Consolas.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Consolas.ttf; sourceTree = "<group>"; };
 		E680ED50183DDFA90091DDEB /* Desert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Desert.png; sourceTree = "<group>"; };
 		E680ED51183DDFA90091DDEB /* dialogue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dialogue.png; sourceTree = "<group>"; };
@@ -239,6 +243,7 @@
 		E68E1F911821B0E900D0F5E7 /* StateMachineComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateMachineComponent.h; sourceTree = "<group>"; };
 		E68E1F941821B32E00D0F5E7 /* SteeringComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SteeringComponent.cpp; sourceTree = "<group>"; };
 		E68E1F951821B32E00D0F5E7 /* SteeringComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteeringComponent.h; sourceTree = "<group>"; };
+		E6914F1818441FD100D08351 /* Particle.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Particle.xml; sourceTree = "<group>"; };
 		E69A6E1118317FAF00D035AE /* CombatProcess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CombatProcess.cpp; sourceTree = "<group>"; };
 		E69A6E1218317FAF00D035AE /* CombatProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CombatProcess.h; sourceTree = "<group>"; };
 		E69A6E15183183F700D035AE /* CharacterAttributes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CharacterAttributes.cpp; sourceTree = "<group>"; };
@@ -249,6 +254,8 @@
 		E69A6E1E1832042800D035AE /* CombatAbility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CombatAbility.h; sourceTree = "<group>"; };
 		E69A6E211832076900D035AE /* Combat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Combat.cpp; sourceTree = "<group>"; };
 		E69A6E221832076900D035AE /* Combat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Combat.h; sourceTree = "<group>"; };
+		E6BF54271843A1D100253504 /* GameHUDComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameHUDComponent.cpp; sourceTree = "<group>"; };
+		E6BF54281843A1D100253504 /* GameHUDComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHUDComponent.h; sourceTree = "<group>"; };
 		E6CABFD818408F5600AF1B28 /* CombatAbilities.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CombatAbilities.xml; sourceTree = "<group>"; };
 		E6F3991D180E75A20077E733 /* Engine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Engine.xcodeproj; path = ../../../LunaEngine/Projects/iOS/Engine.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -393,6 +400,8 @@
 				E68E1F911821B0E900D0F5E7 /* StateMachineComponent.h */,
 				E68E1F941821B32E00D0F5E7 /* SteeringComponent.cpp */,
 				E68E1F951821B32E00D0F5E7 /* SteeringComponent.h */,
+				E6BF54271843A1D100253504 /* GameHUDComponent.cpp */,
+				E6BF54281843A1D100253504 /* GameHUDComponent.h */,
 			);
 			name = Source;
 			path = ../../Source;
@@ -415,7 +424,7 @@
 				E6CABFD818408F5600AF1B28 /* CombatAbilities.xml */,
 				E680ED4C183DDFA90091DDEB /* Arial.ttf */,
 				E680ED4D183DDFA90091DDEB /* Avatar0.png */,
-				E680ED4E183DDFA90091DDEB /* CombatScreen.xml */,
+				E680ED4E183DDFA90091DDEB /* GameHUD.xml */,
 				E680ED4F183DDFA90091DDEB /* Consolas.ttf */,
 				E680ED50183DDFA90091DDEB /* Desert.png */,
 				E680ED51183DDFA90091DDEB /* dialogue.png */,
@@ -427,6 +436,7 @@
 				E680ED5A183DDFAA0091DDEB /* Rock.png */,
 				E680ED5B183DDFAA0091DDEB /* scroll.png */,
 				E680ED5C183DDFAA0091DDEB /* sketch.png */,
+				E6914F1818441FD100D08351 /* Particle.xml */,
 				E680ED5E183DDFAA0091DDEB /* Snow.png */,
 				E680ED5F183DDFAA0091DDEB /* Terrain.frag */,
 				E680ED60183DDFAA0091DDEB /* Terrain.vert */,
@@ -606,7 +616,7 @@
 				E650D5FC184169E3008B2A5F /* wave1.png in Resources */,
 				E680ED7B183DE0BE0091DDEB /* Arial.ttf in Resources */,
 				E680ED83183DE0BE0091DDEB /* Dirt.png in Resources */,
-				E680ED7D183DE0BE0091DDEB /* CombatScreen.xml in Resources */,
+				E680ED7D183DE0BE0091DDEB /* GameHUD.xml in Resources */,
 				E680ED87183DE0BE0091DDEB /* scroll.png in Resources */,
 				E680ED86183DE0BE0091DDEB /* Rock.png in Resources */,
 				E680ED85183DE0BE0091DDEB /* Grass.png in Resources */,
@@ -649,6 +659,7 @@
 				E680ED8A183DE0BE0091DDEB /* Terrain.frag in Sources */,
 				E68E1F921821B0E900D0F5E7 /* StateMachineComponent.cpp in Sources */,
 				E69A6E17183183F700D035AE /* CharacterAttributes.cpp in Sources */,
+				E6BF54291843A1D100253504 /* GameHUDComponent.cpp in Sources */,
 				E680ED8B183DE0BE0091DDEB /* Terrain.vert in Sources */,
 				E69A6E1318317FAF00D035AE /* CombatProcess.cpp in Sources */,
 			);
@@ -672,6 +683,7 @@
 				E69A6E201832042800D035AE /* CombatAbility.cpp in Sources */,
 				E69A6E241832076900D035AE /* Combat.cpp in Sources */,
 				E60E524A1804098900181A26 /* Main.cpp in Sources */,
+				E6BF542C1843A4AC00253504 /* GameHUDComponent.cpp in Sources */,
 				E69A6E1C183184EB00D035AE /* Character.cpp in Sources */,
 				E680ED2C183DDD600091DDEB /* TalkerComponent.cpp in Sources */,
 				E68E1F971821B32E00D0F5E7 /* SteeringComponent.cpp in Sources */,

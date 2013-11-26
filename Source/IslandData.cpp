@@ -84,6 +84,8 @@ void IslandData::Generate( int iWidth, int iHeight )
             (*this)( x ,  y ) = std::min( m_pHeightMap[ y * m_uiSizeX + x ] * GetMaskHeight( x, y ), 1.0f );
         }
     }
+    
+    SmoothTerrain();
         
 }
     
@@ -706,4 +708,53 @@ void IslandData::RecieveMoisture( float fMoisture, float fAltitude, unsigned int
 			DistributeMoisture( iX, iY );
 		}
 	}
+}
+
+void IslandData::SmoothTerrain( int iSampleSize /*= 3*/ )
+{
+    int iOffset = iSampleSize / 2;
+    
+    float* pHeights = new float[ m_uiSizeX * m_uiSizeY ];
+    
+    for ( unsigned y = 0; y < m_uiSizeY; ++y )
+    {
+        for ( unsigned x = 0; x < m_uiSizeX; ++x )
+        {
+            AverageHeight( pHeights, m_pHeightMap, x, y, iOffset );
+        }
+    }
+    
+    delete []  m_pHeightMap;
+    
+    m_pHeightMap = pHeights;
+}
+
+void IslandData::AverageHeight( float* pDest, float* pSource, int iX, int iY, int iSampleSize )
+{
+    pDest[ iY * m_uiSizeX + iX ] = 0.0f;
+    
+    int iStartX = iX - iSampleSize;
+    int iStartY = iY - iSampleSize;
+    
+    int iEndX = iX + iSampleSize;
+    int iEndY = iY + iSampleSize;
+    
+    int iCount = 0;
+    for ( int j = iStartY; j <= iEndY; ++j )
+    {
+        if ( j < 0 || j >= m_uiSizeY )
+            continue;
+        
+        for ( int i = iStartX; i <= iEndX; ++i )
+        {
+            if ( i < 0 || i >= m_uiSizeX )
+                continue;
+            
+            ++iCount;
+            
+            pDest[ iY * m_uiSizeX + iX ] += pSource[ j * m_uiSizeX + i ];
+        }
+    }
+    
+    pDest[ iY * m_uiSizeX + iX ] /= iCount;
 }

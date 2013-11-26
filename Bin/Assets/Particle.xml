@@ -1,0 +1,8 @@
+<Emitter>
+    <Processor Type="VelocityOverAge">
+        <StartVelocity x="0" y="0" z="1"/>
+        <EndVelocity x="0" y="0" z="10"/>
+    </Processor>
+    
+    <Processor Type="SphericalSpawnPosition" Radius="10" />
+</Emitter>

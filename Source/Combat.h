@@ -8,7 +8,6 @@
 
 #pragma once
 
-#include "CombatProcess.h"
 #include "CharacterAttributes.h"
 #include "Character.h"
 #include "CombatAbility.h"
@@ -20,4 +19,17 @@ public:
     
     static void ProcessAbility( const CombatAbility& ability, Entity* pUser, Entity* pTarget );
     static void ResolveEffect( const CombatEffect& effect, Entity* pUser, Entity* pTarget );
+    
+    static const HashedString hMessageCombatStart;
+    static const HashedString hMessageCombatOver;
+    static const HashedString hMessageCombatWon;
+    static const HashedString hMessageCombatLost;
+    
+    struct CombatStartData
+    {
+        Character* pCombatant0;
+        Character* pCombatant1;
+    };
 };
+
+#include "CombatProcess.h"

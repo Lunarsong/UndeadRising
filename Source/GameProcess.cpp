@@ -15,12 +15,20 @@
 #include <Game/Dialogue/UI/DialogueInterface.h>
 #include "TalkerComponent.h"
 #include "CombatAbility.h"
+#include "GameHUDComponent.h"
 #include <Game/Entities/Components/Rendering/WaterPlane.h>
+#include <Game/Entities/Components/Rendering/Particles/ParticleProcessorFactory.h>
 
 GameProcess::GameProcess()
 {
     InputManager::Get()->AddMouseHandler( this );
     InputManager::Get()->AddTouchHandler( this );
+    
+    ParticleProcessorFactory::Initialize();
+    
+    ParticleEmitterData data;
+    data.VFromXML( AssetManager::Get().GetAsset<XmlResource>( "Particle.xml" )->GetRoot() );
+    data;
 }
 
 GameProcess::~GameProcess()
@@ -381,6 +389,12 @@ void GameProcess::VOnInit(void)
     
     pEntity->AddComponent( pCharacter );
     pCharacter->Release();
+    
+    GameHUDComponent* pGameHud = new GameHUDComponent();
+    pEntity->AddComponent( pGameHud );
+    pGameHud->Start();
+    pGameHud->Release();
+    
     m_pMrBitey = pEntity;
     
     pEntity = Game::CreateEntity();

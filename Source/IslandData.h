@@ -61,6 +61,8 @@ public:
     // casting operators
     operator float* () { return m_pHeightMap; }
     operator const float* () const { return m_pHeightMap; }
+    
+    void SmoothTerrain( int iSampleSize = 3 );
 
 private:
     float* m_pHeightMap;
@@ -83,4 +85,6 @@ private:
 	void AssignLandOrFreshwater();
 
 	void GenerateMoisture();
+    
+    void AverageHeight( float* pDest, float* pSource, int iX, int iY, int iSampleSize );
 };
