@@ -130,6 +130,12 @@ bool CombatEffect::VFromXML( tinyxml2::XMLElement* pData )
     
     pData->QueryFloatAttribute( "Radius", &fRadius );
     
+    const char* pParticles = pData->Attribute( "Particles" );
+    if ( pParticles )
+    {
+        strParticles = pParticles;
+    }
+    
     return true;
 }
 

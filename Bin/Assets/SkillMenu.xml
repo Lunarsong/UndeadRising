@@ -1,0 +1,26 @@
+<Monitor>
+	<Size x="1280" y="720"/>
+	
+	<UI>
+		<RelPosition x="0.0" y="0.0" />
+		<Position x="0" y="0" />
+		<Size x="1.0" y="1.0" />
+        
+        <Color>
+            <Position x="0.015" y="0.015" Type="Percentage" />
+            <Size x="0.97" y="0.97" Type="Percentage" />
+            
+            <Color Red="120" Green="120" Blue="120" Alpha="200" />
+            
+        </Color>
+        
+        <Color>
+            <Position x="0.025" y="0.025" Type="Percentage" />
+            <Size x="0.95" y="0.95" Type="Percentage" />
+            
+            <Color Red="255" Green="0" Blue="0" Alpha="200" />
+            
+        </Color>
+    </UI>
+    
+</Monitor>

@@ -48,6 +48,8 @@ struct CombatEffect : public Engine::IXMLResource, public Engine::ISerializable
     Type eType;
     EffectTarget eTarget;
     
+    std::string strParticles;
+    
     void VSerialize( std::ostream &out ) const;
     void VDeserialize( std::istream& in );
     

@@ -1,8 +1,26 @@
-<Emitter>
+<Emitter MaxParticles="500" Texture="Explosion.png" >
     <Processor Type="VelocityOverAge">
         <StartVelocity x="0" y="0" z="1"/>
         <EndVelocity x="0" y="0" z="10"/>
     </Processor>
     
-    <Processor Type="SphericalSpawnPosition" Radius="10" />
+    <Processor Type="SphericalSpawnPosition" Radius="1" />
+    
+    <Processor Type="SizeOverAge">
+        <Modifier Type="Curve">
+            <Point1 x="0" y="0" z="0"/>
+            <Point2 x="50" y="5" z="0"/>
+            <Point3 x="50" y="0" z="5"/>
+            <Point4 x="0" y="5" z="5"/>
+        </Modifier>
+    </Processor>
+    
+    <Processor Type="ColorOverAge">
+        <Modifier Type="Curve">
+            <Point1 x="0" y="0" z="0"/>
+            <Point2 x="0.89" y="0.55" z="0.1765"/>
+            <Point3 x="0.8588" y="0.298" z="0.1725"/>
+            <Point4 x="1.0" y="1.0" z="1.0"/>
+        </Modifier>
+    </Processor>
 </Emitter>

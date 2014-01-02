@@ -82,6 +82,16 @@
 		E68E1F961821B32E00D0F5E7 /* SteeringComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E68E1F941821B32E00D0F5E7 /* SteeringComponent.cpp */; };
 		E68E1F971821B32E00D0F5E7 /* SteeringComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E68E1F941821B32E00D0F5E7 /* SteeringComponent.cpp */; };
 		E6914F1918441FD100D08351 /* Particle.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6914F1818441FD100D08351 /* Particle.xml */; };
+		E699242A18471910005D7185 /* CharacterInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E699242818471910005D7185 /* CharacterInterface.cpp */; };
+		E699242B18471910005D7185 /* CharacterInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E699242818471910005D7185 /* CharacterInterface.cpp */; };
+		E69924301847191B005D7185 /* SkillInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E699242E1847191B005D7185 /* SkillInterface.cpp */; };
+		E69924311847191B005D7185 /* SkillInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E699242E1847191B005D7185 /* SkillInterface.cpp */; };
+		E699243318471A6B005D7185 /* SkillMenu.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = E699243218471A6B005D7185 /* SkillMenu.xml */; };
+		E699243418471A74005D7185 /* SkillMenu.xml in Resources */ = {isa = PBXBuildFile; fileRef = E699243218471A6B005D7185 /* SkillMenu.xml */; };
+		E699243818471CAF005D7185 /* SkillTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E699243618471CAF005D7185 /* SkillTree.cpp */; };
+		E699243918471CAF005D7185 /* SkillTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E699243618471CAF005D7185 /* SkillTree.cpp */; };
+		E699243C18471CD6005D7185 /* SkillTreeItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E699243A18471CD6005D7185 /* SkillTreeItem.cpp */; };
+		E699243D18471CD6005D7185 /* SkillTreeItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E699243A18471CD6005D7185 /* SkillTreeItem.cpp */; };
 		E69A6E1318317FAF00D035AE /* CombatProcess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E69A6E1118317FAF00D035AE /* CombatProcess.cpp */; };
 		E69A6E1418317FAF00D035AE /* CombatProcess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E69A6E1118317FAF00D035AE /* CombatProcess.cpp */; };
 		E69A6E17183183F700D035AE /* CharacterAttributes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E69A6E15183183F700D035AE /* CharacterAttributes.cpp */; };
@@ -163,6 +173,7 @@
 				E680ED66183DDFAA0091DDEB /* GameHUD.xml in CopyFiles */,
 				E680ED67183DDFAA0091DDEB /* Consolas.ttf in CopyFiles */,
 				E680ED68183DDFAA0091DDEB /* Desert.png in CopyFiles */,
+				E699243318471A6B005D7185 /* SkillMenu.xml in CopyFiles */,
 				E6914F1918441FD100D08351 /* Particle.xml in CopyFiles */,
 				E650D5F7184169C6008B2A5F /* wave0.png in CopyFiles */,
 				E650D5F8184169C6008B2A5F /* wave1.png in CopyFiles */,
@@ -244,6 +255,15 @@
 		E68E1F941821B32E00D0F5E7 /* SteeringComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SteeringComponent.cpp; sourceTree = "<group>"; };
 		E68E1F951821B32E00D0F5E7 /* SteeringComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteeringComponent.h; sourceTree = "<group>"; };
 		E6914F1818441FD100D08351 /* Particle.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Particle.xml; sourceTree = "<group>"; };
+		E699242818471910005D7185 /* CharacterInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CharacterInterface.cpp; sourceTree = "<group>"; };
+		E699242918471910005D7185 /* CharacterInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterInterface.h; sourceTree = "<group>"; };
+		E699242E1847191B005D7185 /* SkillInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SkillInterface.cpp; sourceTree = "<group>"; };
+		E699242F1847191B005D7185 /* SkillInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkillInterface.h; sourceTree = "<group>"; };
+		E699243218471A6B005D7185 /* SkillMenu.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SkillMenu.xml; sourceTree = "<group>"; };
+		E699243618471CAF005D7185 /* SkillTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SkillTree.cpp; sourceTree = "<group>"; };
+		E699243718471CAF005D7185 /* SkillTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkillTree.h; sourceTree = "<group>"; };
+		E699243A18471CD6005D7185 /* SkillTreeItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SkillTreeItem.cpp; sourceTree = "<group>"; };
+		E699243B18471CD6005D7185 /* SkillTreeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkillTreeItem.h; sourceTree = "<group>"; };
 		E69A6E1118317FAF00D035AE /* CombatProcess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CombatProcess.cpp; sourceTree = "<group>"; };
 		E69A6E1218317FAF00D035AE /* CombatProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CombatProcess.h; sourceTree = "<group>"; };
 		E69A6E15183183F700D035AE /* CharacterAttributes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CharacterAttributes.cpp; sourceTree = "<group>"; };
@@ -385,6 +405,7 @@
 		E60E52461804098900181A26 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				E699243518471C9F005D7185 /* SkillTree */,
 				E69A6E0D18317F9800D035AE /* Combat */,
 				E680ED25183DDD600091DDEB /* InteractableComponent.cpp */,
 				E680ED26183DDD600091DDEB /* InteractableComponent.h */,
@@ -427,6 +448,7 @@
 				E680ED4E183DDFA90091DDEB /* GameHUD.xml */,
 				E680ED4F183DDFA90091DDEB /* Consolas.ttf */,
 				E680ED50183DDFA90091DDEB /* Desert.png */,
+				E699243218471A6B005D7185 /* SkillMenu.xml */,
 				E680ED51183DDFA90091DDEB /* dialogue.png */,
 				E680ED52183DDFA90091DDEB /* Dialogue.xml */,
 				E680ED53183DDFA90091DDEB /* DialogueInterface.xml */,
@@ -446,6 +468,17 @@
 			path = ../../Bin/Assets;
 			sourceTree = "<group>";
 		};
+		E699243518471C9F005D7185 /* SkillTree */ = {
+			isa = PBXGroup;
+			children = (
+				E699243618471CAF005D7185 /* SkillTree.cpp */,
+				E699243718471CAF005D7185 /* SkillTree.h */,
+				E699243A18471CD6005D7185 /* SkillTreeItem.cpp */,
+				E699243B18471CD6005D7185 /* SkillTreeItem.h */,
+			);
+			name = SkillTree;
+			sourceTree = "<group>";
+		};
 		E69A6E0D18317F9800D035AE /* Combat */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,6 +492,10 @@
 				E69A6E1E1832042800D035AE /* CombatAbility.h */,
 				E69A6E211832076900D035AE /* Combat.cpp */,
 				E69A6E221832076900D035AE /* Combat.h */,
+				E699242818471910005D7185 /* CharacterInterface.cpp */,
+				E699242918471910005D7185 /* CharacterInterface.h */,
+				E699242E1847191B005D7185 /* SkillInterface.cpp */,
+				E699242F1847191B005D7185 /* SkillInterface.h */,
 			);
 			name = Combat;
 			sourceTree = "<group>";
@@ -623,6 +660,7 @@
 				E6CABFDC18408F5F00AF1B28 /* CombatAbilities.xml in Resources */,
 				E680ED7C183DE0BE0091DDEB /* Avatar0.png in Resources */,
 				E680ED82183DE0BE0091DDEB /* DialogueInterface.xml in Resources */,
+				E699243418471A74005D7185 /* SkillMenu.xml in Resources */,
 				E650D5FB184169E3008B2A5F /* wave0.png in Resources */,
 				E680ED7F183DE0BE0091DDEB /* Desert.png in Resources */,
 				E680ED81183DE0BE0091DDEB /* Dialogue.xml in Resources */,
@@ -657,10 +695,14 @@
 				E68E1F961821B32E00D0F5E7 /* SteeringComponent.cpp in Sources */,
 				E680ED29183DDD600091DDEB /* InteractableComponent.cpp in Sources */,
 				E680ED8A183DE0BE0091DDEB /* Terrain.frag in Sources */,
+				E699243C18471CD6005D7185 /* SkillTreeItem.cpp in Sources */,
 				E68E1F921821B0E900D0F5E7 /* StateMachineComponent.cpp in Sources */,
 				E69A6E17183183F700D035AE /* CharacterAttributes.cpp in Sources */,
+				E699242A18471910005D7185 /* CharacterInterface.cpp in Sources */,
+				E699243818471CAF005D7185 /* SkillTree.cpp in Sources */,
 				E6BF54291843A1D100253504 /* GameHUDComponent.cpp in Sources */,
 				E680ED8B183DE0BE0091DDEB /* Terrain.vert in Sources */,
+				E69924301847191B005D7185 /* SkillInterface.cpp in Sources */,
 				E69A6E1318317FAF00D035AE /* CombatProcess.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -680,15 +722,19 @@
 			files = (
 				E67326E01820FB4C004B1FFB /* IslandData.cpp in Sources */,
 				E68E1F8F1821A69300D0F5E7 /* GameProcess.cpp in Sources */,
+				E69924311847191B005D7185 /* SkillInterface.cpp in Sources */,
 				E69A6E201832042800D035AE /* CombatAbility.cpp in Sources */,
 				E69A6E241832076900D035AE /* Combat.cpp in Sources */,
+				E699242B18471910005D7185 /* CharacterInterface.cpp in Sources */,
 				E60E524A1804098900181A26 /* Main.cpp in Sources */,
 				E6BF542C1843A4AC00253504 /* GameHUDComponent.cpp in Sources */,
 				E69A6E1C183184EB00D035AE /* Character.cpp in Sources */,
 				E680ED2C183DDD600091DDEB /* TalkerComponent.cpp in Sources */,
+				E699243D18471CD6005D7185 /* SkillTreeItem.cpp in Sources */,
 				E68E1F971821B32E00D0F5E7 /* SteeringComponent.cpp in Sources */,
 				E680ED2A183DDD600091DDEB /* InteractableComponent.cpp in Sources */,
 				E68E1F931821B0E900D0F5E7 /* StateMachineComponent.cpp in Sources */,
+				E699243918471CAF005D7185 /* SkillTree.cpp in Sources */,
 				E69A6E18183183F700D035AE /* CharacterAttributes.cpp in Sources */,
 				E69A6E1418317FAF00D035AE /* CombatProcess.cpp in Sources */,
 			);

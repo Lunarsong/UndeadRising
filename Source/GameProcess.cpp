@@ -18,27 +18,29 @@
 #include "GameHUDComponent.h"
 #include <Game/Entities/Components/Rendering/WaterPlane.h>
 #include <Game/Entities/Components/Rendering/Particles/ParticleProcessorFactory.h>
+#include "SkillInterface.h"
 
+SkillInterface* pSkillInterface;
 GameProcess::GameProcess()
 {
     InputManager::Get()->AddMouseHandler( this );
     InputManager::Get()->AddTouchHandler( this );
     
     ParticleProcessorFactory::Initialize();
-    
-    ParticleEmitterData data;
-    data.VFromXML( AssetManager::Get().GetAsset<XmlResource>( "Particle.xml" )->GetRoot() );
-    data;
 }
 
 GameProcess::~GameProcess()
 {
     InputManager::Get()->RemoveMouseHandler( this );
     InputManager::Get()->RemoveTouchHandler( this );
+    
+    //delete pSkillInterface;
 }
 
 void GameProcess::VOnInit(void)
 {
+    //pSkillInterface =  new SkillInterface();
+    
 	DialogueInterface* pDialogue = new DialogueInterface( NULL, "DialogueInterface.xml", "Dialogue.xml" );
 	pDialogue->SetName( "Dialogue" );
 	BaseApplication::Get()->AttachProcess( pDialogue );
@@ -359,7 +361,7 @@ void GameProcess::VOnInit(void)
 	mat.SetPosition( Vector4( 0.0f, 0.0f, 0.0f ) );
     pEntity = Game::CreateEntity( mat );
     pMeshComponent = new MeshComponent();
-    pEntity->AddComponent( pMeshComponent );
+//    pEntity->AddComponent( pMeshComponent );
     pMeshComponent->SetMesh( pMesh );
     pMesh->Release();
     pMeshComponent->Start();
@@ -462,6 +464,38 @@ void GameProcess::VOnUpdate( const float fDeltaSeconds )
 
 	m_pCamera->SetAngleDelta( vAngles * fDeltaSeconds );
 	m_pCamera->SetDistanceDelta(- InputManager::Get()->GetMouseWheelDelta().y );
+    
+    static const float speed = 1000.0f;
+    
+    if (InputManager::Get()->GetKeyState( KEY_UPARROW ) != NONE_KEYSTATE )
+    {
+        m_pMrBitey->GetTransform().Move(Vector3::FORWARD * fDeltaSeconds * speed);
+    }
+    
+    if (InputManager::Get()->GetKeyState( KEY_RIGHTARROW ) != NONE_KEYSTATE )
+    {
+        m_pMrBitey->GetTransform().Move(Vector3::RIGHT * fDeltaSeconds * speed);
+    }
+    
+    if (InputManager::Get()->GetKeyState( KEY_DOWNARROW ) != NONE_KEYSTATE )
+    {
+        m_pMrBitey->GetTransform().Move(-Vector3::FORWARD * fDeltaSeconds * speed);
+    }
+    
+    if (InputManager::Get()->GetKeyState( KEY_LEFTARROW ) != NONE_KEYSTATE )
+    {
+        m_pMrBitey->GetTransform().Move(-Vector3::RIGHT * fDeltaSeconds * speed);
+    }
+    
+    if (InputManager::Get()->GetKeyState( KEY_SPACE ) != NONE_KEYSTATE )
+    {
+        m_pMrBitey->GetTransform().Move(Vector3::UP * fDeltaSeconds * speed);
+    }
+    
+    if (InputManager::Get()->GetKeyState( KEY_X ) != NONE_KEYSTATE )
+    {
+        m_pMrBitey->GetTransform().Move(-Vector3::UP * fDeltaSeconds * speed);
+    }
 }
 
 void GameProcess::VOnSuccess(void)

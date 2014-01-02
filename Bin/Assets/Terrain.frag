@@ -43,5 +43,5 @@ void main()
                            LOG2 );
     fogFactor = clamp(fogFactor, 0.0, 1.0);
     
-    gl_FragColor = mix( vFogColor, gl_FragColor, fogFactor );
+ //   gl_FragColor = mix( vFogColor, gl_FragColor, fogFactor );
 }

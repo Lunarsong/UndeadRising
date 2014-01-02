@@ -5,11 +5,11 @@
 	</Ability>
     
     <Ability Name="Fireball" Range="15" Target="Position">
-		<CombatEffect Target="Area" Type="Fire" Min="16" Max="24" Radius="3"/>/>
+		<CombatEffect Target="Other" Type="Fire" Min="16" Max="24" Radius="3" Particles="Particle.xml" />
 	</Ability>
     
     <Ability Name="Burning Hands" Range="3" Target="Entity">
-		<CombatEffect Target="Other" Type="Fire" Min="20" Max="28" Radius="0"/>>
+		<CombatEffect Target="Other" Type="Fire" Min="20" Max="28" Radius="0"/>
 	</Ability>
     
     <Ability Name="Arcane Missile" Range="15" Target="Entity">
